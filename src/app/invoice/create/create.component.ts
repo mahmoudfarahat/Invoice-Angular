@@ -97,7 +97,7 @@ id.value = price
 
 
 
-
+  // ( this.form.get("list") as FormArray).push(new FormControl("",[Validators.required]));
 
 
   addProduct() {
