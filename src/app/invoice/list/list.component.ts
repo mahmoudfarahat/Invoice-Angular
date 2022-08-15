@@ -1,3 +1,4 @@
+import { InvoiceService } from './../../services/invoice.service';
 import { Component, OnInit } from '@angular/core';
 import { ColumnMode } from '@swimlane/ngx-datatable';
 @Component({
@@ -10,44 +11,27 @@ export class ListComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.invoice.getInvocie().subscribe(a=>{
+      this.rows = a;
+    });
   }
-rows = [];
+rows:any[] = [];
   loadingIndicator = true;
   reorderable = true;
 
   columns = [
-    { prop: 'Id', summaryFunc: () => null },
-    { name: 'Invoice Number', summaryFunc: (cells:any) => this.summaryForGender(cells) },
-    { name: 'Date', summaryFunc: () => null },
-    { name: 'Total', summaryFunc: () => null }
+    { prop: 'ID'},
+    { name: 'Invoice Number' , prop:"InvoiceNumber"} ,
+    { name: 'Date' , prop:"Date"},
+    { name: 'Total', prop:"Total" }
   ];
 
   ColumnMode = ColumnMode;
 
-  constructor() {
-    this.fetch((data:any) => {
-      this.rows = data;
-      setTimeout(() => {
-        this.loadingIndicator = false;
-      }, 1500);
-    });
+  constructor(private invoice:InvoiceService) {
+
   }
 
-  fetch(cb:any) {
-    const req = new XMLHttpRequest();
-    req.open('GET', `assets/data/company.json`);
 
-    req.onload = () => {
-      cb(JSON.parse(req.response));
-    };
 
-    req.send();
-  }
-
-  private summaryForGender(cells: string[]) {
-    const males = cells.filter(cell => cell === 'male').length;
-    const females = cells.filter(cell => cell === 'female').length;
-
-    return `males: ${males}, females: ${females}`;
-  }
 }

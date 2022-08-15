@@ -36,4 +36,10 @@ export class InvoiceService {
   {
     return this.http.post(environment.apiUrl + "Inovices/Create" , inovice )
   }
+  getInvocie()
+  {
+    return this.http.get<any[]>(environment.apiUrl + "Inovices" );
+  }
+
+
 }

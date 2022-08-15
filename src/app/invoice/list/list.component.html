@@ -4,6 +4,8 @@
     <a class="btn btn-success btn-lg  "routerLink="create">Create</a>
   </div>
 
+
+  <div *ngIf="rows.length != 0">
   <ngx-datatable
     class="bootstrap"
     [rows]="rows"
@@ -16,8 +18,9 @@
     [footerHeight]="40"
     [limit]="10"
     rowHeight="auto"
-    [reorderable]="reorderable"
+
   >
   </ngx-datatable>
+</div>
 </div>
 

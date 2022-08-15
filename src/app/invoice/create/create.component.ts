@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormBuilder, Validators } from '@angular/forms'
 import { setTheme } from 'ngx-bootstrap/utils';
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -27,7 +28,7 @@ export class CreateComponent implements OnInit {
   onSubmit()
   {
     this.service.createInvocie(this.productForm.value).subscribe(res => {
-      console.log(res)
+     this.router.navigate(["/"]);
     })
   }
 
@@ -68,7 +69,7 @@ id.value = price
 }
   productForm: FormGroup;
 
-  constructor(private fb:FormBuilder , private service :InvoiceService) {
+  constructor(private fb:FormBuilder , private service :InvoiceService, private router:Router) {
     this.getEmployees();
     this.getcustomers();
     this.getProducts();
@@ -77,7 +78,7 @@ id.value = price
 
       InovoiceNumber:['', Validators.required ],
       Date:[''],
-      CustomerName:[''],
+      CustomerName:['',Validators.required],
       EmployeeName:['',Validators.required],
       Products: this.fb.array([]) ,
 
