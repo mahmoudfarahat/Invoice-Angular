@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-6">
             <label for="">Invoice Number</label>
-            <input type="text" value="" class="form-control" formControlName="inovoiceNumber"  />
+            <input type="text" value="" class="form-control" formControlName="InovoiceNumber"  />
 
             <!-- {{ incoive.?errors | json}} -->
 
@@ -34,16 +34,10 @@
             {{invoiceNumber?.errors | json}}
             <label for="">Date</label>
 
-            <!-- <mat-form-field  appearance="fill">
-              <mat-label>Choose a date</mat-label>
-              <input class="form-control" matInput [matDatepicker]="picker">
-              <mat-hint>MM/DD/YYYY</mat-hint>
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field> -->
 
 
-                <input type="text"
+
+                <input type="text" formControlName="Date"
                        placeholder="Choose Date"
                        class="form-control"
                        bsDatepicker>
@@ -55,17 +49,17 @@
           </div>
           <div class="col-6">
             <br />
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="Default select example"formControlName="CustomerName">
               <option selected>choose customer</option>
-              <option   *ngFor="let item of customers;" [value]="item.Id">{{item!.Name}}</option>
+              <option   *ngFor="let item of customers;" [value]="item.Id" >{{item!.Name}}</option>
             </select>
 
             <br />
 
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="Default select example" formControlName="EmployeeName">
 
 
-              <option>Chosee Employe</option>
+              <option value="" selected disabled>Chosee Employe</option>
                 <option   *ngFor="let item of employees;" [value]="item.Id">{{item!.Name}}</option>
             </select>
           </div>
@@ -75,11 +69,11 @@
 
         <div class="d-flex justify-content-between m-3">
           <label  class="align-middle m-0   p-3" style="background-color: rgb(250, 240, 228) ; width: 350px;">Add Multiple Products</label>
-          <button class="btn btn-primary   " (click)="addProduct()">Add Product</button>
+          <button class="btn btn-primary   " (click)="addProduct()"     type="button"    >Add Product</button>
         </div>
-        <table class="  ms-5 " formArrayName="products">
+        <table class="  ms-5 " formArrayName="Products">
 
-          <tr *ngFor="let product of products().controls; let i = index"
+          <tr *ngFor="let product of products.controls; let i = index"
 
 
 
@@ -87,8 +81,9 @@
             <td>
 
           <select  (change)="onPriceChange($event,price)"   class="form-select" aria-label="Default select example"  formControlName="ProductName" >
-            <option selected>choose Product</option>
 
+
+            <option selected disabled>choose Product</option>
             <option   *ngFor="let item of productList;" [value]="item.Id">{{item!.Name}}</option>
 
           </select>
@@ -97,7 +92,7 @@
 
               <input #price type="text" placeholder="Price"
 
-              formControlName="price"   class="form-control"
+              formControlName="Price"   class="form-control"
 
               />
 
@@ -106,12 +101,12 @@
 
             <td>
 
-              <input type="text"  placeholder="Quantity" formControlName="quantity" class="form-control" />
+              <input type="text"  placeholder="Quantity" formControlName="Quantity" class="form-control" />
             </td>
 
             <td>
 
-              <input type="text" placeholder="Total" formControlName="total" class="form-control" />
+              <input type="text" placeholder="Total" formControlName="Total" class="form-control" />
             </td>
             <td>
               <label for="">   </label>
@@ -122,7 +117,9 @@
           </tr>
         </table>
         <div class="d-flex flex-row-reverse mt-5">
-          <button type="submit" class="btn btn-success btn-lg m-3" [disabled]="!productForm.valid">Save</button>
+          <button type="submit" class="btn btn-success btn-lg m-3"
+
+          [disabled]="!productForm.valid">Save</button>
         </div>
 
 

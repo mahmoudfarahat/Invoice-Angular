@@ -1,5 +1,5 @@
 import { InvoiceService } from './../../services/invoice.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormBuilder, Validators } from '@angular/forms'
 import { setTheme } from 'ngx-bootstrap/utils';
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
@@ -24,7 +24,12 @@ export class CreateComponent implements OnInit {
 
   value: any ='';
 
-
+  onSubmit()
+  {
+    this.service.createInvocie(this.productForm.value).subscribe(res => {
+      console.log(res)
+    })
+  }
 
   getEmployees()
   {
@@ -69,8 +74,12 @@ id.value = price
     this.getProducts();
 
     this.productForm = this.fb.group({
-      inovoiceNumber:['', Validators.required ],
-      products: this.fb.array([]) ,
+
+      InovoiceNumber:['', Validators.required ],
+      Date:[''],
+      CustomerName:[''],
+      EmployeeName:['',Validators.required],
+      Products: this.fb.array([]) ,
 
     });
 
@@ -79,18 +88,17 @@ id.value = price
 
 
   }
-
-  products() : FormArray {
-    return this.productForm.get("products") as FormArray
+get   products() : FormArray {
+    return this.productForm.get("Products") as FormArray
   }
 
   newProduct(): FormGroup {
     return this.fb.group({
-      product:'',
-     price: '',
-      quantity: '',
-      total: '',
-      ProductName: ''
+      ProductName: '',
+     Price: '',
+      Quantity: '',
+      Total: '',
+
 
     })
   }
@@ -101,14 +109,14 @@ id.value = price
 
 
   addProduct() {
-    this.products().push(this.newProduct());
+    this.products.push(this.newProduct());
   }
 
   removeProduct(i:number) {
-    this.products().removeAt(i);
+    this.products.removeAt(i);
   }
 
-  onSubmit() {
+  onSubmits() {
     console.log(this.productForm.value.products);
 
  let Group = this.productForm.value.products

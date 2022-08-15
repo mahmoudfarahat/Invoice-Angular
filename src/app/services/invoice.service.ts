@@ -29,4 +29,11 @@ export class InvoiceService {
   {
     return this.http.get(environment.apiUrl + "Products/" + id)
   }
+
+
+
+  createInvocie(inovice :any)
+  {
+    return this.http.post(environment.apiUrl + "Inovices/Create" , inovice )
+  }
 }
