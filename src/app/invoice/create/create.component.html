@@ -14,14 +14,14 @@
 
 
             <div
-            *ngIf="invoiceNumber?.errors! && invoiceNumber?.touched
-            && invoiceNumber?.dirty">
+            *ngIf="InvoiceNumber?.errors! && InvoiceNumber?.touched
+            && InvoiceNumber?.dirty">
 
-              <div *ngIf="invoiceNumber?.errors!['required']">
+              <div *ngIf="InvoiceNumber?.errors!['required']">
                   the Invoice is required
               </div>
-              <div *ngIf="invoiceNumber!errors">
-                <div *ngIf="invoiceNumber?.errors!['productExits']">
+              <div *ngIf="InvoiceNumber!errors">
+                <div *ngIf="InvoiceNumber?.errors!['productExits']">
                   is already in database
               </div>
             </div>
@@ -31,7 +31,7 @@
 
 
 
-            {{invoiceNumber?.errors | json}}
+            {{InvoiceNumber?.errors | json}}
             <label for="">Date</label>
 
 

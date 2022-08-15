@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
 })
 export class CreateComponent implements OnInit {
 
- public get invoiceNumber() {
+ public get InvoiceNumber() {
     // console.log(this.productForm.get("inovoiceNumber"));
-    return this.productForm.get("inovoiceNumber");
+    return this.productForm.get("InovoiceNumber");
   }
   ngOnInit(): void {
   }
@@ -84,7 +84,7 @@ id.value = price
 
     });
 
-    this.productForm.get("inovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
+    this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
 
 
 

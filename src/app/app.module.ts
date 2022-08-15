@@ -12,9 +12,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 
  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TrimPipe } from './trim.pipe';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TrimPipe
   ],
   imports: [
     BrowserModule,
