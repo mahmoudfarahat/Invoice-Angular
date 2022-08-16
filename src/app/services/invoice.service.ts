@@ -36,9 +36,13 @@ export class InvoiceService {
   {
     return this.http.post(environment.apiUrl + "Inovices/Create" , inovice )
   }
-  getInvocie()
+  getInvocie(offset:number, limit:number)
   {
-    return this.http.get<any[]>(environment.apiUrl + "Inovices" );
+    return this.http.get<any>(environment.apiUrl + `Inovices?start=${(offset * limit)}&length=${limit}`);
+  }
+  getInvocietop10()
+  {
+    return this.http.get<any>(environment.apiUrl + `Inovices`);
   }
 
 

@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 
   <div class="d-flex flex-row-reverse mt-5">
     <a class="btn btn-success btn-lg  "routerLink="create">Create</a>
@@ -9,6 +9,8 @@
   <ngx-datatable
     class="bootstrap"
     [rows]="rows"
+    [count]="count"
+
     [loadingIndicator]="loadingIndicator"
     [columns]="columns"
     [columnMode]="ColumnMode.force"
@@ -16,6 +18,11 @@
     [summaryRow]="true"
     [summaryPosition]="'bottom'"
     [footerHeight]="40"
+    [externalPaging]="true"
+    [count]="count"
+    [offset]="page.offset"
+    [limit]="page.limit"
+    (page)="ClickPage($event)"
     [limit]="10"
     rowHeight="auto"
 
@@ -23,4 +30,44 @@
   </ngx-datatable>
 </div>
 </div>
+ -->
 
+
+ <ngx-datatable
+class="bootstrap"
+[count]="count"
+[loadingIndicator]="loadingIndicator"
+[columnMode]="columnMode"
+[footerHeight]="50"
+[limit]="10"
+(page)="ClickPage($event)"
+[rows]="rows"
+
+
+[limit]="page.limit" [externalPaging]="true"
+[offset]="page.offset"
+rowHeight="auto"
+>
+
+
+<ngx-datatable-column name="InvoiceNumber" [width]="90" [resizeable]="false" [sortable]="false">
+  <ng-template let-row="row" ngx-datatable-cell-template>
+    {{row.InvoiceNumber}}
+  </ng-template>
+</ngx-datatable-column>
+<ngx-datatable-column name="Date" [width]="60" [resizeable]="false" [sortable]="false">
+  <ng-template let-row="row" ngx-datatable-cell-template>
+    {{row.Date |date}}
+  </ng-template>
+</ngx-datatable-column>
+
+<ngx-datatable-column name="" [width]="70" [resizeable]="false"  [sortable]="false">
+  <ng-template let-row="row" ngx-datatable-cell-template>
+    <!-- {{row.id}} -->
+   <a class="btn btn-primary" [routerLink]="['edit',row.id]">Edit</a> |
+   <a class="btn btn-danger" [routerLink]="['delete',row.id]">Delete</a>
+  </ng-template>
+</ngx-datatable-column>
+
+
+ </ngx-datatable>

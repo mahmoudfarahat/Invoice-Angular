@@ -7,30 +7,90 @@ import { ColumnMode } from '@swimlane/ngx-datatable';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+//   count = 0;
+//   loadingIndicator = true;
+//   page = {
+//     limit: 10,
+//     count: 0,
+//     offset: 0,
+//     orderBy: 'myColumn1',
+//     orderDir: 'desc',
+//     pageSize: 10
+//    };
+//   ngOnInit(): void {
+//     this.invoice.getInvocie().subscribe(a=>{
+//       this.count = a.recordsFiltered;
+//       this.loadingIndicator = false;
+//       this.rows = a;
+//     });
+//   }
+// rows:any[] = [];
 
 
+//   columns = [
+//     { prop: 'ID'},
+//     { name: 'Invoice Number' , prop:"InvoiceNumber"} ,
+//     { name: 'Date' , prop:"Date"},
+//     { name: 'Total', prop:"Total" }
+//   ];
 
-  ngOnInit(): void {
-    this.invoice.getInvocie().subscribe(a=>{
-      this.rows = a;
-    });
-  }
+//   ColumnMode = ColumnMode;
+
 rows:any[] = [];
-  loadingIndicator = true;
-  reorderable = true;
-
-  columns = [
-    { prop: 'ID'},
-    { name: 'Invoice Number' , prop:"InvoiceNumber"} ,
-    { name: 'Date' , prop:"Date"},
-    { name: 'Total', prop:"Total" }
-  ];
-
-  ColumnMode = ColumnMode;
-
+count = 0;
+loadingIndicator = true;
+page = {
+limit: 10,
+count: 0,
+offset: 0,
+orderBy: 'myColumn1',
+orderDir: 'desc',
+pageSize: 10
+};
+columnMode:ColumnMode = ColumnMode.force;
   constructor(private invoice:InvoiceService) {
 
   }
+  ngOnInit(): void {
+   this.invoice.getInvocietop10().subscribe(a=>{
+    this.count = a.recordsFiltered;
+    this.loadingIndicator = false;
+    this.rows = [];
+    for (const iterator of a.data) {
+       this.rows.push(iterator);
+    }
+   })
+  }
+
+  ClickPage(d:any){
+  //  this.(environment.BaseURL+`/api/Customers?start=${(d.offset * d.limit)}&length=${d.limit}`).subscribe(a=>{
+  //     this.count = a.recordsFiltered;
+  //     this.loadingIndicator = false;
+  //     this.rows = [];
+  //     for (const iterator of a.data) {
+  //        this.rows.push(iterator);
+  //     }
+  //  });
+  console.log(d);
+  this.invoice.getInvocie(d.offset,d.limit).subscribe(a=>{
+    this.count = a.recordsFiltered;
+    this.loadingIndicator = false;
+    this.rows = [];
+    for (const iterator of a.data) {
+       this.rows.push(iterator);
+    }
+  });
+  }
+  // ClickPage(d:any){
+  //   this.invoice.getInvocie(environment.BaseURL+`/api/Customers?start=${(d.offset * d.limit)}&length=${d.limit}`).subscribe(a=>{
+  //     this.count = a.recordsFiltered;
+  //     this.loadingIndicator = false;
+  //     this.rows = [];
+  //     for (const iterator of a.data) {
+  //        this.rows.push(iterator);
+  //     }
+  //  });
+  // }
 
 
 
