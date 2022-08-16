@@ -10,20 +10,97 @@ import { Router } from '@angular/router';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
+  productForm!: FormGroup;
+  employees:any = []
+  customers:any = []
+  productList:any = []
+  value: any ='';
+
 
  public get InvoiceNumber() {
     // console.log(this.productForm.get("inovoiceNumber"));
     return this.productForm.get("InovoiceNumber");
   }
+
   ngOnInit(): void {
+
+    this.productForm = new FormGroup({
+      InovoiceNumber:new FormControl('', [Validators.required]),
+      Date:new FormControl('', [Validators.required ]),
+      CustomerName:new FormControl('', [Validators.required ]),
+      EmployeeName:new FormControl('', [Validators.required ]),
+      Products:new FormArray([  ])
+    })
+
+    this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
+
   }
 
-  employees:any = []
-  customers:any = []
-  productList:any = []
 
 
-  value: any ='';
+
+
+  constructor(private fb:FormBuilder , private service :InvoiceService, private router:Router) {
+    this.getEmployees();
+    this.getcustomers();
+    this.getProducts();
+
+    // this.productForm = this.fb.group({
+
+    //   InovoiceNumber:['', Validators.required ],
+    //   Date:[''],
+    //   CustomerName:['',Validators.required],
+    //   EmployeeName:['',Validators.required],
+    //   Products: this.fb.array([]) ,
+
+    // });
+
+    // this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
+
+
+
+  }
+
+
+ get   products() : FormArray {
+    return this.productForm.get("Products") as FormArray
+  }
+
+  // newProduct(): FormGroup {
+  //   return this.fb.group({
+  //     ProductName: '',
+  //    Price: '',
+  //     Quantity: '',
+  //     Total: '',
+
+
+  //   })
+  // }
+
+
+
+  // ( this.form.get("list") as FormArray).push(new FormControl("",[Validators.required]));
+
+
+  addProduct() {
+    // this.products.push(this.newProduct());
+
+  (this.productForm.get("Products") as FormArray).push(new FormGroup({
+    ProductName:new FormControl('', [Validators.required ]),
+    Price:new FormControl('', [Validators.required ]),
+    Quantity:new FormControl('', [Validators.required ]),
+    Total:new FormControl('', [Validators.required ]),
+
+  }));
+
+
+  }
+
+  removeProduct(i:number) {
+    this.products.removeAt(i);
+  }
+
+
 
   onSubmit()
   {
@@ -51,78 +128,12 @@ getProducts()
     this.productList = response
   })
 }
-getProduct(id:any){
-    this.service.getProduct(id).subscribe(response =>{
-      console.log(response)
-this.value = response
 
-
-    })
-}
 onPriceChange(event:any,id :any)
 {
 console.log(event)
 const price =this.productList.find((a:any) => a.Id === +event.target.value ).Price
 id.value = price
-
-
-}
-  productForm: FormGroup;
-
-  constructor(private fb:FormBuilder , private service :InvoiceService, private router:Router) {
-    this.getEmployees();
-    this.getcustomers();
-    this.getProducts();
-
-    this.productForm = this.fb.group({
-
-      InovoiceNumber:['', Validators.required ],
-      Date:[''],
-      CustomerName:['',Validators.required],
-      EmployeeName:['',Validators.required],
-      Products: this.fb.array([]) ,
-
-    });
-
-    this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
-
-
-
-  }
-get   products() : FormArray {
-    return this.productForm.get("Products") as FormArray
-  }
-
-  newProduct(): FormGroup {
-    return this.fb.group({
-      ProductName: '',
-     Price: '',
-      Quantity: '',
-      Total: '',
-
-
-    })
-  }
-
-
-
-  // ( this.form.get("list") as FormArray).push(new FormControl("",[Validators.required]));
-
-
-  addProduct() {
-    this.products.push(this.newProduct());
-  }
-
-  removeProduct(i:number) {
-    this.products.removeAt(i);
-  }
-
-  onSubmits() {
-    console.log(this.productForm.value.products);
-
- let Group = this.productForm.value.products
-
-
 
 
 }
