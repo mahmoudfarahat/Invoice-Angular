@@ -34,7 +34,7 @@ export class EditComponent implements OnInit {
   );
 
     this.productForm = new FormGroup({
-    InovoiceNumber:new FormControl('', [Validators.required]),
+      InvoiceNumber:new FormControl('', [Validators.required]),
     Date:new FormControl('', [Validators.required ]),
     CustomerName:new FormControl('', [Validators.required ]),
     EmployeeName:new FormControl('', [Validators.required ]),
@@ -99,7 +99,15 @@ getOneInvocie(id:any)
   this.service.getOneInvocie(id).subscribe(res=> {
     // console.log(res)
     this.invoice = res;
+    this.productForm = new FormGroup({
+      InvoiceNumber:new FormControl(this.invoice.InvoiceNumber, [Validators.required]),
+    Date:new FormControl(this.invoice.Date, [Validators.required ]),
+    CustomerName:new FormControl(this.invoice.CustomerId, [Validators.required ]),
+    EmployeeName:new FormControl(this.invoice.EmployeId, [Validators.required ]),
+    Products:new FormArray([  ])
+  })
 
+  this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
    for (const iterator of this.invoice.Products) {
     console.log(iterator);
     ( this.productForm.get("Products") as  FormArray).push(new FormGroup({
