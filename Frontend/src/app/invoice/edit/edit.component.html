@@ -63,6 +63,8 @@
           </button>
         </div>
         <table class="ms-5" formArrayName="Products">
+
+
           <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
             <td>
               <select (change)="onPriceChange($event, price)" class="form-select" aria-label="Default select example"

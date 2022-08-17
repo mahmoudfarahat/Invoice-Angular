@@ -29,7 +29,7 @@ namespace invoice.Controllers
                            Date =         a.Date,
 
                       Products =a.InvoiceDetails
-                .Select(m => new { m.Price , m.Product.Name }),
+                .Select(m => new { m.Price , m.Product.Name , m.ProductID }),
                 
                 });
 
@@ -120,7 +120,7 @@ namespace invoice.Controllers
                 EmployeId =  a.EmployeId,
                 CustomerId = a.CustomerId,
                 Products = a.InvoiceDetails
-                .Select(m => new { m.Price, m.Product.Name }),
+                .Select(m => new { m.Price, m.Product.Name , m.ProductID }),
 
             }).FirstOrDefault(a => a.ID== id));
         }

@@ -42,6 +42,7 @@ export class EditComponent implements OnInit {
   })
 
   this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
+
   }
 
   get   products() : FormArray {
@@ -97,8 +98,20 @@ getOneInvocie(id:any)
 {
   this.service.getOneInvocie(id).subscribe(res=> {
     // console.log(res)
-    this.invoice = res
-  console.log( this.invoice)
+    this.invoice = res;
+
+   for (const iterator of this.invoice.Products) {
+    console.log(iterator);
+    ( this.productForm.get("Products") as  FormArray).push(new FormGroup({
+      ProductName:new FormControl(iterator.ProductID,[Validators.required]),
+      Price:new FormControl(iterator.Price , [Validators.required]),
+      Quantity:new FormControl(0),
+      Total:new FormControl(0)
+
+    }))
+   }
+
+
   })
 }
 onPriceChange(event:any,id :any)
