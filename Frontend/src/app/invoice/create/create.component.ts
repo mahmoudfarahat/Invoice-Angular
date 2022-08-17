@@ -1,6 +1,6 @@
 import { InvoiceService } from './../../services/invoice.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormArray, FormBuilder, Validators } from '@angular/forms'
+import { FormGroup, FormControl, FormArray, FormBuilder, Validators, AbstractControl } from '@angular/forms'
 import { setTheme } from 'ngx-bootstrap/utils';
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
 import { Router } from '@angular/router';
@@ -129,11 +129,14 @@ getProducts()
   })
 }
 
-onPriceChange(event:any,id :any)
+onPriceChange(event:any,ab :AbstractControl)
 {
-console.log(event)
-const price =this.productList.find((a:any) => a.Id === +event.target.value ).Price
-id.value = price
+  console.log(ab);
+   const price =this.productList.find((a:any) => a.Id === +event.target.value ).Price;
+  (ab as FormGroup).get("Price")?.setValue(price);
+
+
+// id.setValue(event.target.value)
 
 
 }

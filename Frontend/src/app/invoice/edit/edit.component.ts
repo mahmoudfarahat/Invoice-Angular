@@ -15,7 +15,13 @@ export class EditComponent implements OnInit {
   employees:any= []
   customers:any= []
   productList:any= []
-  productForm!: FormGroup;
+  productForm: FormGroup = new FormGroup({
+    InvoiceNumber:new FormControl('', [Validators.required]),
+  Date:new FormControl('', [Validators.required ]),
+  CustomerName:new FormControl('', [Validators.required ]),
+  EmployeeName:new FormControl('', [Validators.required ]),
+  Products:new FormArray([  ])
+});
   invoice:Invoice  | any = {}
   constructor(private service:InvoiceService , private router:Router
     ,private route:ActivatedRoute) {
@@ -33,13 +39,6 @@ export class EditComponent implements OnInit {
       }
   );
 
-    this.productForm = new FormGroup({
-      InvoiceNumber:new FormControl('', [Validators.required]),
-    Date:new FormControl('', [Validators.required ]),
-    CustomerName:new FormControl('', [Validators.required ]),
-    EmployeeName:new FormControl('', [Validators.required ]),
-    Products:new FormArray([  ])
-  })
 
   this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
 
