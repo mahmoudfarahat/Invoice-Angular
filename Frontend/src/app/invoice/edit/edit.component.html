@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="d-flex justify-content-center mt-5">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="card" style="width: 1000px">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <label for="">Invoice Number</label>
+              <input type="text" value="{{ invoice.InvoiceNumber }}" class="form-control"
+                formControlName="InovoiceNumber" />
+
+              <!-- {{ incoive.?errors | json}} -->
+
+              <div *ngIf="
+                  InvoiceNumber?.errors! &&
+                  InvoiceNumber?.touched &&
+                  InvoiceNumber?.dirty
+                ">
+                <div *ngIf="(InvoiceNumber?.errors)!['required']">
+                  the Invoice is required
+                </div>
+                <div *ngIf="InvoiceNumber!; errors">
+                  <div *ngIf="(InvoiceNumber?.errors)!['productExits']">
+                    is already in database
+                  </div>
+                </div>
+              </div>
+
+              {{ InvoiceNumber?.errors | json }}
+              <label for="">Date</label>
+
+              <input type="text" formControlName="Date" value="{{ invoice.Date | date }}" placeholder="Choose Date"
+                class="form-control" bsDatepicker />
+            </div>
+            <div class="col-6">
+              <br />
+              <select value="{{ invoice.CustomerId }}" class="form-select" aria-label="Default select example"
+                formControlName="CustomerName">
+                <option selected>choose customer</option>
+                <option *ngFor="let item of customers" [value]="item.Id">
+                  {{ item!.Name }}
+                </option>
+              </select>
+
+              <br />
+
+              <select value="{{ invoice.EmployeId }}" class="form-select" aria-label="Default select example"
+                formControlName="EmployeeName">
+                <option value="" selected disabled>Chosee Employe</option>
+                <option *ngFor="let item of employees" [value]="item.Id">
+                  {{ item!.Name }}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between m-3">
+          <label class="align-middle m-0 p-3" style="background-color: rgb(250, 240, 228); width: 350px">Add Multiple
+            Products</label>
+          <button class="btn btn-primary" (click)="addProduct()" type="button">
+            Add Product
+          </button>
+        </div>
+        <table class="ms-5" formArrayName="Products">
+          <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
+            <td>
+              <select (change)="onPriceChange($event, price)" class="form-select" aria-label="Default select example"
+                formControlName="ProductName">
+                <option selected disabled>choose Product</option>
+                <option *ngFor="let item of productList" [value]="item.Id">
+                  {{ item!.Name }}
+                </option>
+              </select>
+            </td>
+            <td>
+              <input #price type="text" placeholder="Price" formControlName="Price" class="form-control" />
+            </td>
+
+            <td>
+              <input type="text" placeholder="Quantity" formControlName="Quantity" class="form-control" />
+            </td>
+
+            <td>
+              <input type="text" placeholder="Total" formControlName="Total" class="form-control" />
+            </td>
+            <td>
+              <label for=""> </label>
+              <button (click)="removeProduct(i)" class="btn btn-danger">
+                Remove
+              </button>
+            </td>
+          </tr>
+        </table>
+        <div class="d-flex flex-row-reverse mt-5">
+          <button type="submit" class="btn btn-success btn-lg m-3" [disabled]="!productForm.valid">
+            Save
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  {{ this.productForm.value | json }}
+</div>
