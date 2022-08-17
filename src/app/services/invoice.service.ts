@@ -2,6 +2,7 @@ import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../models/products';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -43,6 +44,11 @@ export class InvoiceService {
   getInvocietop10()
   {
     return this.http.get<any>(environment.apiUrl + `Inovices`);
+  }
+
+  getOneInvocie(id:any)
+  {
+    return this.http.get<any>(environment.apiUrl + `Inovices/${id}`);
   }
 
 

@@ -18,7 +18,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 const router:Routes = [
   {path:"" , component:ListComponent},
   {path:"create" , component:CreateComponent},
-  {path:"edit" , component:EditComponent}
+  {path:"edit/:id" , component:EditComponent}
 
 ]
 
