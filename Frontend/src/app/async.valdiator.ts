@@ -31,13 +31,13 @@ return(control:AbstractControl):Observable<ValidationErrors|null>=>{
 }
 
 function refresh(res:any , control:any){
-  let isExits = res.some((a:any)=> a.Name ==  control.value)
+  let isExits = res.data.some((a:any)=> a.InvoiceNumber ==  control.value)
    return (isExits == true )?    {productExits : true} : null
 }
 
 
 function checkname():Observable<any>{
-  return ajax.getJSON('http://localhost:1081/api/Products')
+  return ajax.getJSON('http://localhost:1081/api/Inovices')
 
 }
 }
