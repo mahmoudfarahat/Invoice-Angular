@@ -27,9 +27,7 @@ namespace invoice.Controllers
                 .Select(a => new {ID = a.ID,
                     InvoiceNumber= a.InvoiceNumber,
                            Date =         a.Date,
-
-                      Products =a.InvoiceDetails
-                .Select(m => new { m.Price , m.Product.Name , m.ProductID }),
+                      Products =a.InvoiceDetails.Select(m => new {m.Price , m.Product.Name , m.ProductID }),
                 
                 });
 
@@ -126,5 +124,13 @@ namespace invoice.Controllers
         }
 
 
+        [HttpDelete ]
+        public IHttpActionResult Delete(int id)
+        {
+            Invoice invoice = db.Invoices.Find(id);
+            db.Invoices.Remove(invoice);
+            db.SaveChanges();
+            return Ok( new {  message ="Inovice has been deleted" });
+        }
     }
 }

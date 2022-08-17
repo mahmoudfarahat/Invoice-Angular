@@ -68,7 +68,7 @@
       <!-- {{row.id}} -->
      <a class="btn btn-primary" [routerLink]="['edit',row.ID]">Edit</a> |
 
-     <a class="btn btn-danger" [routerLink]="['delete',row.ID]">Delete</a>
+     <button class="btn btn-danger"  (click)="deleteInvoice(row.ID)">Delete</button>
     </ng-template>
   </ngx-datatable-column>
 

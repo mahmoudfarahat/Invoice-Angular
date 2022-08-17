@@ -92,6 +92,19 @@ columnMode:ColumnMode = ColumnMode.force;
   //  });
   // }
 
+  deleteInvoice(id:any){
+this.invoice.deleteInvoice(id).subscribe(res=> {
+  console.log(res)
+  this.invoice.getInvocie(this.page.offset,this.page.limit).subscribe(a=>{
+    this.count = a.recordsFiltered;
+    this.loadingIndicator = false;
+    this.rows = [];
+    for (const iterator of a.data) {
+       this.rows.push(iterator);
+    }
+  });
 
+});
+  }
 
 }

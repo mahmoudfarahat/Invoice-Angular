@@ -51,6 +51,10 @@ export class InvoiceService {
   {
     return this.http.get<Invoice>(environment.apiUrl + `Inovices/${id}`);
   }
+deleteInvoice(id:any)
+{
+  return this.http.delete<Invoice>(environment.apiUrl + `Inovices/${id}`);
 
+}
 
 }
