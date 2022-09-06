@@ -7,6 +7,20 @@ import { ColumnMode } from '@swimlane/ngx-datatable';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+
+  ana ={
+    hello:"hello"
+  }
+  editMode = false
+
+  change()
+  {
+    console.log("Fsaff")
+    this.editMode = true
+  }
+
+
+
 //   count = 0;
 //   loadingIndicator = true;
 //   page = {
