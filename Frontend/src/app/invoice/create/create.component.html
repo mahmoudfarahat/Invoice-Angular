@@ -2,114 +2,110 @@
   <div class="d-flex justify-content-center mt-5">
     <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
 
-    <div class="card" style="width: 1000px">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-6">
-            <label for="">Invoice Number</label>
-            <input type="text" value="" class="form-control" formControlName="InovoiceNumber"  />
+      <div class="card" style="width: 1000px">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <br />
+              <input placeholder="Invoice Number" type="text" value="" class="form-control" formControlName="InovoiceNumber" />
 
-            <!-- {{ incoive.?errors | json}} -->
+              <!-- {{ incoive.?errors | json}} -->
 
 
 
-            <div
-            *ngIf="InvoiceNumber?.errors! && InvoiceNumber?.touched
+              <div *ngIf="InvoiceNumber?.errors! && InvoiceNumber?.touched
             && InvoiceNumber?.dirty">
 
-              <div *ngIf="InvoiceNumber?.errors!['required']">
+                <div *ngIf="InvoiceNumber?.errors!['required']">
                   the Invoice is required
+                </div>
+                <div *ngIf="InvoiceNumber!errors">
+                  <div *ngIf="InvoiceNumber?.errors!['productExits']">
+                    is already in database
+                  </div>
+                </div>
+
+
               </div>
-              <div *ngIf="InvoiceNumber!errors">
-                <div *ngIf="InvoiceNumber?.errors!['productExits']">
-                  is already in database
-              </div>
+
+
+
+              <!-- {{InvoiceNumber?.errors | json}} -->
+              <br />
+
+
+
+
+              <input type="text" formControlName="Date" placeholder="Choose Date" class="form-control" bsDatepicker>
+
+
+
+
+
             </div>
+            <div class="col-6">
+              <br />
+              <select class="form-select" aria-label="Default select example" formControlName="CustomerName">
+                <option value="" selected disabled >choose customer</option>
+                <option *ngFor="let item of customers;" [value]="item.Id">{{item!.Name}}</option>
+              </select>
+
+              <br />
+
+              <select class="form-select" aria-label="Default select example" formControlName="EmployeeName">
 
 
-          </div>
-
-
-
-            {{InvoiceNumber?.errors | json}}
-            <label for="">Date</label>
-
-
-
-
-                <input type="text" formControlName="Date"
-                       placeholder="Choose Date"
-                       class="form-control"
-                       bsDatepicker>
-
-
-
-
-
-          </div>
-          <div class="col-6">
-            <br />
-            <select class="form-select" aria-label="Default select example"formControlName="CustomerName">
-              <option selected>choose customer</option>
-              <option   *ngFor="let item of customers;" [value]="item.Id" >{{item!.Name}}</option>
-            </select>
-
-            <br />
-
-            <select class="form-select" aria-label="Default select example" formControlName="EmployeeName">
-
-
-              <option value="" selected disabled>Chosee Employe</option>
-                <option   *ngFor="let item of employees;" [value]="item.Id">{{item!.Name}}</option>
-            </select>
+                <option value="" selected disabled>Chosee Employe</option>
+                <option *ngFor="let item of employees;" [value]="item.Id">{{item!.Name}}</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
 
 
-        <div class="d-flex justify-content-between m-3">
-          <label  class="align-middle m-0   p-3" style="background-color: rgb(250, 240, 228) ; width: 350px;">Add Multiple Products</label>
-          <button class="btn btn-primary   " (click)="addProduct()"     type="button"    >Add Product</button>
+        <div class="d-flex flex-row-reverse  m-3">
+
+          <button class="btn btn-primary   " (click)="addProduct()" type="button">Add Product</button>
         </div>
-        <table class="  ms-5 " formArrayName="Products">
+        <table class="  ms-2 " formArrayName="Products">
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
 
-          <tr *ngFor="let product of products.controls; let i = index"
-
-
-
-          [formGroupName]="i">
+          </tr>
+          <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
             <td>
 
-          <select  (change)="onPriceChange($event,product)"   class="form-select" aria-label="Default select example"  formControlName="ProductName" >
+              <select (change)="onPriceChange($event,product)" class="form-select" aria-label="Default select example"
+                formControlName="ProductName">
 
 
-            <option selected disabled>choose Product</option>
-            <option   *ngFor="let item of productList;" [value]="item.Id">{{item!.Name}}</option>
+                <option value="" selected disabled>choose Product</option>
+                <option *ngFor="let item of productList;" [value]="item.Id">{{item!.Name}}</option>
 
-          </select>
+              </select>
             </td>
             <td>
 
-              <input #price type="text" placeholder="Price"
-
-              formControlName="Price"   class="form-control"
-
-              />
+              <input #price type="number" placeholder="Price" formControlName="Price" class="form-control" />
 
 
-            </td>
-
-            <td>
-
-              <input type="text"  placeholder="Quantity" formControlName="Quantity" class="form-control" />
             </td>
 
             <td>
 
-              <input type="text" placeholder="Total" formControlName="Total" class="form-control" />
+              <input #quantity type="number" placeholder="Quantity" formControlName="Quantity" class="form-control" />
+            </td>
+
+            <td>
+
+              <input #total type="text" placeholder="Total" [value]="getRowTotal(product,  price.value, quantity.value)"
+                formControlName="Total" class="form-control" />
             </td>
             <td>
-              <label for="">   </label>
+              <label for=""> </label>
               <button (click)="removeProduct(i)" class="btn btn-danger   ">
                 Remove
               </button>
@@ -117,21 +113,16 @@
           </tr>
         </table>
         <div class="d-flex flex-row-reverse mt-5">
-          <button type="submit" class="btn btn-success btn-lg m-3"
-
-          [disabled]="!productForm.valid">Save</button>
+          <button type="submit" class="btn btn-success btn-lg m-3" [disabled]="!productForm.valid">Save</button>
         </div>
 
 
 
 
 
-    </div>
-  </form>
+      </div>
+    </form>
 
   </div>
   {{this.productForm.value | json}}
 </div>
-
-
-

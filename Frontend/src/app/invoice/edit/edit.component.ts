@@ -107,6 +107,7 @@ getOneInvocie(id:any)
   })
 
   this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
+
    for (const iterator of this.invoice.Products) {
     console.log(iterator);
     ( this.productForm.get("Products") as  FormArray).push(new FormGroup({
