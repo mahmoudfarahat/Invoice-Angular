@@ -5,7 +5,8 @@
         <div class="card-body">
           <div class="row">
             <div class="col-6">
-              <label for="">Invoice Number</label>
+             
+              <br />
               <input type="text" value="{{ invoice.InvoiceNumber }}" class="form-control"
                 formControlName="InvoiceNumber" />
 
@@ -25,10 +26,9 @@
                   </div>
                 </div>
               </div>
-
-              {{ InvoiceNumber?.errors | json }}
-              <label for="">Date</label>
-
+              <br />
+              <!-- {{ InvoiceNumber?.errors | json }} -->
+ 
               <input type="text" formControlName="Date" value="{{ invoice.Date | date }}" placeholder="Choose Date"
                 class="form-control" bsDatepicker />
             </div>
@@ -55,16 +55,21 @@
           </div>
         </div>
 
-        <div class="d-flex justify-content-between m-3">
-          <label class="align-middle m-0 p-3" style="background-color: rgb(250, 240, 228); width: 350px">Add Multiple
-            Products</label>
+        <div class="d-flex flex-row-reverse m-3">
+    
           <button class="btn btn-primary" (click)="addProduct()" type="button">
             Add Product
           </button>
         </div>
-        <table class="ms-5" formArrayName="Products">
+        <table class="ms-2" formArrayName="Products">
 
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
 
+          </tr>
           <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
             <td>
               <select (change)="onPriceChange($event, price)" class="form-select" aria-label="Default select example"
