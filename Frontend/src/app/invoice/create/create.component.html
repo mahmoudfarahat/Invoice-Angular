@@ -13,15 +13,15 @@
 
 
 
-              <div *ngIf="InvoiceNumber?.errors! && InvoiceNumber?.touched
+              <div class="text-danger" *ngIf="InvoiceNumber?.errors! && InvoiceNumber?.touched
             && InvoiceNumber?.dirty">
 
                 <div *ngIf="InvoiceNumber?.errors!['required']">
-                  the Invoice is required
+                  Invoice Number is required
                 </div>
-                <div *ngIf="InvoiceNumber!errors">
-                  <div *ngIf="InvoiceNumber?.errors!['productExits']">
-                    is already in database
+                <div *ngIf="InvoiceNumber!errors" style="    margin-bottom: -24px;">
+                  <div *ngIf="InvoiceNumber?.errors!['productExits']"  >
+                    Invoice Number is already in database
                   </div>
                 </div>
 
@@ -32,7 +32,7 @@
 
               <!-- {{InvoiceNumber?.errors | json}} -->
               <br />
-
+ <br />
 
 
 
@@ -51,7 +51,7 @@
               </select>
 
               <br />
-
+              <br />
               <select class="form-select" aria-label="Default select example" formControlName="EmployeeName">
 
 
