@@ -4,6 +4,13 @@ import { FormGroup, FormControl, FormArray, FormBuilder, Validators, AbstractCon
 import { setTheme } from 'ngx-bootstrap/utils';
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
 import { Router } from '@angular/router';
+
+import * as pdfMake from "pdfMake/build/pdfmake";
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+
+(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
+
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -42,7 +49,7 @@ export class CreateComponent implements OnInit {
 
   }
 
- 
+
 
 
 
@@ -124,4 +131,32 @@ onSubmit()
    this.router.navigate(["/"]);
   })
 }
+
+
+generatePDF() {  
+  var docDefinition = {
+    content: [
+      {
+        layout: 'lightHorizontalLines', // optional
+        table: {
+          // headers are automatically repeated if the table spans over multiple pages
+          // you can declare how many rows should be treated as headers
+          headerRows: 1,
+          widths: [ '*', 'auto', 100, '*' ],
+  
+          body: [
+            [ 'First', 'Second', 'Third', 'The last one' ],
+            [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+            [ { text: 'Bold value', bold: true }, 'Val 2', 'Val 3', 'Val 4' ]
+          ]
+        }
+      }
+    ]
+  };
+ 
+  pdfMake.createPdf(docDefinition).open();  
+}  
+
+
+
 }
