@@ -1,6 +1,10 @@
 # Invoice
 
-<img scr="project.png">
+ 
+ 
+ <img src="project.png"  class=" "  alt="">
+ 
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
 
