@@ -2,8 +2,8 @@
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InvoiceService } from './../../services/invoice.service';
-import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators ,AbstractControl } from '@angular/forms';
 import { Invoice } from 'src/app/models/inovice';
 import * as pdfMake from "pdfMake/build/pdfmake";
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
@@ -14,9 +14,11 @@ import { DatePipe } from '@angular/common'
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  styleUrls: ['./edit.component.css'],
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EditComponent implements OnInit {
+  docDefinition?:any ;
   employees:any= []
   customers:any= []
   productList:any= []
@@ -137,6 +139,14 @@ id.value = price
 
 
 }
+
+getRowTotal(ab :AbstractControl , quantity:any , price:any)
+{
+  let calculatedRow = quantity * price;
+   (ab as FormGroup).get("Total")?.setValue(calculatedRow)
+
+}
+
 generatePDF() {
 
   let InvoiceNum:any =this.productForm.get("InvoiceNumber")?.value
@@ -146,7 +156,7 @@ generatePDF() {
   let date = this.datepipe.transform(getdate, 'yyyy-MM-dd')
 
 
-var docDefinition = {
+this.docDefinition = {
   content: [
     { text:  `Invoice Number: ${InvoiceNum}` , fontSize: 15 },
     { text:  ` ` , fontSize: 15 },
@@ -178,9 +188,14 @@ var docDefinition = {
   ]
 };
 
-pdfMake.createPdf(docDefinition).open();
-}
 
+pdfMake.createPdf(this.docDefinition).open();
+}
+ 
+printPdf()
+{
+  pdfMake.createPdf(this.docDefinition).print();
+}
 
 
 }
