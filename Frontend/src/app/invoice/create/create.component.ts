@@ -52,7 +52,7 @@ x:any ;
 
 
 
- 
+
 
 
   constructor(public datepipe: DatePipe,private fb:FormBuilder , private service :InvoiceService, private router:Router) {}
@@ -147,26 +147,28 @@ generatePDF() {
     content: [
       { text:  `Invoice Number: ${InvoiceNum}` , fontSize: 15 },
       { text:  ` ` , fontSize: 15 },
-      { text:  `Customer Name: ${customer}` , fontSize: 15 },
+      { text:  `Customer Name: ${this.customers.find((d:any)=> d.Id == customer).Name}` , fontSize: 15 },
       { text:  ` ` , fontSize: 15 },
-      { text:  `Employee Name: ${employee}` , fontSize: 15 },
+      { text:  `Employee Name: ${this.employees.find((d:any)=> d.Id == employee).Name}` , fontSize: 15 },
       { text:  ` ` , fontSize: 15 },
       { text:  `Date: ${date}` , fontSize: 15 },
+      { text:  ` ` , fontSize: 15 },
       {
-          
+
         layout: 'lightHorizontalLines', // optional
-        
+
         table: {
 
           // headers are automatically repeated if the table spans over multiple pages
           // you can declare how many rows should be treated as headers
           headerRows: 1,
-          widths: [ '*', 'auto', 100, '*' ],
+          widths: [ '*', '*', '*', '*' ],
 
           body: [
-            [ 'Products', 'Price', 'Quantity', 'Total' ],
-            [ InvoiceNum, 'Value 2', 'Value 3', 'Value 4' ],
-            [ { text: 'Bold value', bold: true }, 'Val 2', 'Val 3', 'Val 4' ]
+            [ 'Product', 'Price', 'Quantity', 'Total' ],
+
+            ...(this.products.value as any[]).map(a=> [this.productList.find((d:any)=> d.Id == a.ProductName).Name , a.Price, a.Quantity, a.Total])
+
           ]
         }
       }
