@@ -146,8 +146,11 @@ generatePDF() {
   var docDefinition = {
     content: [
       { text:  `Invoice Number: ${InvoiceNum}` , fontSize: 15 },
+      { text:  ` ` , fontSize: 15 },
       { text:  `Customer Name: ${customer}` , fontSize: 15 },
+      { text:  ` ` , fontSize: 15 },
       { text:  `Employee Name: ${employee}` , fontSize: 15 },
+      { text:  ` ` , fontSize: 15 },
       { text:  `Date: ${date}` , fontSize: 15 },
       {
           
