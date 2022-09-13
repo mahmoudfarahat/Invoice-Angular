@@ -43,7 +43,7 @@ docDefinition:any;
     this.getProducts();
 
 
-    this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
+    this.productForm.get("InvoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
 
 
 
