@@ -18,7 +18,7 @@ import { DatePipe } from '@angular/common'
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EditComponent implements OnInit {
-  docDefinition?:any ;
+  docDefinition:any ;
   employees:any= []
   customers:any= []
   productList:any= []
@@ -189,11 +189,21 @@ this.docDefinition = {
 };
 
 
-pdfMake.createPdf(this.docDefinition).open();
+
+
+
 }
  
+openPdf()
+{
+  this.generatePDF()
+  pdfMake.createPdf(this.docDefinition).open();
+
+}
 printPdf()
 {
+  this.generatePDF()
+
   pdfMake.createPdf(this.docDefinition).print();
 }
 

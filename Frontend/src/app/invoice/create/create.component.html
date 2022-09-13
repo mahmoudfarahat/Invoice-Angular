@@ -121,7 +121,7 @@
               style="width: 100%">
               Open
             </button>
-            <button type="button" class="btn btn-primary mt-2" style="width: 100%" [disabled]="!productForm.valid">
+            <button type="button" class="btn btn-primary mt-2" (click)="printPdf()"  style="width: 100%" [disabled]="!productForm.valid">
               Print
             </button>
           </div>

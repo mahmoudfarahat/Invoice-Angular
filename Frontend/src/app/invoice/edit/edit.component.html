@@ -96,7 +96,7 @@
 
                 <td>
                   <input type="text"
-                  [value]="getRowTotal(product, price.value, quantity.value)"
+   
                    placeholder="Total" formControlName="Total" class="form-control" />
                 </td>
                 <td>
@@ -122,7 +122,7 @@
             <button type="submit" class="btn btn-success" style="width: 100%" [disabled]="!productForm.valid">
               Save
             </button>
-            <button type="button" class="btn btn-info mt-2" (click)="generatePDF()" [disabled]="!productForm.valid"
+            <button type="button" class="btn btn-info mt-2" (click)="openPdf()" [disabled]="!productForm.valid"
               style="width: 100%">
               Open
             </button>

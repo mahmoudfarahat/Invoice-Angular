@@ -19,6 +19,7 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 })
 export class CreateComponent implements OnInit {
 x:any ;
+docDefinition:any;
   employees:any = []
   customers:any = []
   productList:any = []
@@ -141,7 +142,7 @@ generatePDF() {
     let date = this.datepipe.transform(getdate, 'yyyy-MM-dd')
 
 
-  var docDefinition = {
+    this.docDefinition = {
     content: [
       { text:  `Invoice Number: ${InvoiceNum}` , fontSize: 15 },
       { text:  ` ` , fontSize: 15 },
@@ -173,9 +174,20 @@ generatePDF() {
     ]
   };
 
-  pdfMake.createPdf(docDefinition).open();
-}
 
+}
+openPdf()
+{
+  this.generatePDF()
+  pdfMake.createPdf(this.docDefinition).open();
+
+}
+printPdf()
+{
+  this.generatePDF()
+
+  pdfMake.createPdf(this.docDefinition).print();
+}
 
 
 }
