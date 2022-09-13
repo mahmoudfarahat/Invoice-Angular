@@ -1,24 +1,24 @@
 <div class="container-fluid">
-  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()"  >
   <div class="row  d-flex justify-content-start">
     <div class="col-9">
       <div class="d-flex   mt-5  ">
-        
-    
+
+
           <div class="card " style="width: 100%;" >
             <div class="card-body">
               <div class="row">
                 <div class="col-6">
                   <br />
                   <input placeholder="Invoice Number" type="text" value="" class="form-control" formControlName="InovoiceNumber" />
-    
+
                   <!-- {{ incoive.?errors | json}} -->
-    
-    
-    
+
+
+
                   <div class="text-danger" *ngIf="InvoiceNumber?.errors! && InvoiceNumber?.touched
                 && InvoiceNumber?.dirty">
-    
+
                     <div *ngIf="InvoiceNumber?.errors!['required']">
                       Invoice Number is required
                     </div>
@@ -27,24 +27,24 @@
                         Invoice Number is already in database
                       </div>
                     </div>
-    
-    
+
+
                   </div>
-    
-    
-    
+
+
+
                   <!-- {{InvoiceNumber?.errors | json}} -->
                   <br />
      <br />
-    
-    
-    
+
+
+
                   <input type="text" formControlName="Date" placeholder="Choose Date" class="form-control" bsDatepicker>
-    
-    
-    
-    
-    
+
+
+
+
+
                 </div>
                 <div class="col-6">
                   <br />
@@ -52,22 +52,22 @@
                     <option value="" selected disabled >Choose customer</option>
                     <option *ngFor="let item of customers;" [value]="item.Id">{{item!.Name}}</option>
                   </select>
-    
+
                   <br />
                   <br />
                   <select class="form-select" aria-label="Default select example" formControlName="EmployeeName">
-    
-    
+
+
                     <option value="" selected disabled>Chosee Employe</option>
                     <option *ngFor="let item of employees;" [value]="item.Id">{{item!.Name}}</option>
                   </select>
                 </div>
               </div>
             </div>
-    
-    
+
+
             <div class="d-flex flex-row-reverse  m-3">
-    
+
               <button class="btn btn-primary   " (click)="addProduct()" type="button">Add Product</button>
             </div>
             <table class="  ms-2   " formArrayName="Products">
@@ -77,34 +77,34 @@
                 <th>Quantity</th>
                 <th>Total</th>
                 <th>Action</th>
-    
+
               </tr>
               <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
                 <td>
-    
+
                   <select (change)="onPriceChange($event,product)" class="form-select" aria-label="Default select example"
                     formControlName="ProductName">
-    
-    
+
+
                     <option value="" selected disabled>Choose Product</option>
                     <option *ngFor="let item of productList;" [value]="item.Id">{{item!.Name}}</option>
-    
+
                   </select>
                 </td>
                 <td>
-    
+
                   <input #price type="number" placeholder="Price" formControlName="Price" class="form-control" />
-    
-    
+
+
                 </td>
-    
+
                 <td>
-    
+
                   <input #quantity type="number" placeholder="Quantity" formControlName="Quantity" class="form-control" />
                 </td>
-    
+
                 <td>
-    
+
                   <input #total type="text" placeholder="Total" [value]="getRowTotal(product,  price.value, quantity.value)"
                     formControlName="Total" class="form-control" />
                 </td>
@@ -118,14 +118,14 @@
             </table>
             <div class="d-flex flex-row-reverse mt-5">
             </div>
-    
-    
-    
-    
-    
+
+
+
+
+
           </div>
-      
-    
+
+
       </div>
       {{this.productForm.value | json}}
     </div>
@@ -133,17 +133,17 @@
 
 
     <div class="col-3 mt-5 ">
-        
+
       <div class="card"    >
         <div class="card-body">
       <button type="submit" class="btn btn-success    " style="width: 100%" [disabled]="!productForm.valid">Save</button>
-      <button type="submit" class="btn btn-info mt-2" (click)="generatePDF()   " style="width: 100%"  >Open</button>
+      <button type="button" class="btn btn-info mt-2" (click)="generatePDF()   " style="width: 100%"  >Open</button>
       <button type="submit" class="btn btn-primary mt-2   " style="width: 100%"  >Print</button>
- 
+
     </div>
   </div>
     </div>
-    
+
   </div>
 </form>
 </div>

@@ -8,6 +8,7 @@ import { ListComponent } from './list/list.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common'
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -52,7 +53,7 @@ const router:Routes = [
     BsDatepickerModule.forRoot()
 
 
-  ]
-
+  ],
+  providers: [DatePipe],
 })
 export class InvoiceModule { }

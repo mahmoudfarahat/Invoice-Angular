@@ -4,7 +4,7 @@ import { FormGroup, FormControl, FormArray, FormBuilder, Validators, AbstractCon
 import { setTheme } from 'ngx-bootstrap/utils';
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
 import { Router } from '@angular/router';
-
+import { DatePipe } from '@angular/common'
 import * as pdfMake from "pdfMake/build/pdfmake";
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 
@@ -18,7 +18,7 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CreateComponent implements OnInit {
-
+x:any ;
   employees:any = []
   customers:any = []
   productList:any = []
@@ -47,14 +47,15 @@ export class CreateComponent implements OnInit {
     this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
 
 
+
   }
 
 
 
+ 
 
 
-
-  constructor(private fb:FormBuilder , private service :InvoiceService, private router:Router) {}
+  constructor(public datepipe: DatePipe,private fb:FormBuilder , private service :InvoiceService, private router:Router) {}
 
 
  get   products() : FormArray {
@@ -133,29 +134,44 @@ onSubmit()
 }
 
 
-generatePDF() {  
+generatePDF() {
+
+    let InvoiceNum:any =this.productForm.get("InovoiceNumber")?.value
+    let customer:any =this.productForm.get("CustomerName")?.value
+    let employee:any =this.productForm.get("EmployeeName")?.value
+    let getdate:any =this.productForm.get("Date")?.value
+    let date = this.datepipe.transform(getdate, 'yyyy-MM-dd')
+
+
   var docDefinition = {
     content: [
+      { text:  `Invoice Number: ${InvoiceNum}` , fontSize: 15 },
+      { text:  `Customer Name: ${customer}` , fontSize: 15 },
+      { text:  `Employee Name: ${employee}` , fontSize: 15 },
+      { text:  `Date: ${date}` , fontSize: 15 },
       {
+          
         layout: 'lightHorizontalLines', // optional
+        
         table: {
+
           // headers are automatically repeated if the table spans over multiple pages
           // you can declare how many rows should be treated as headers
           headerRows: 1,
           widths: [ '*', 'auto', 100, '*' ],
-  
+
           body: [
-            [ 'First', 'Second', 'Third', 'The last one' ],
-            [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+            [ 'Products', 'Price', 'Quantity', 'Total' ],
+            [ InvoiceNum, 'Value 2', 'Value 3', 'Value 4' ],
             [ { text: 'Bold value', bold: true }, 'Val 2', 'Val 3', 'Val 4' ]
           ]
         }
       }
     ]
   };
- 
-  pdfMake.createPdf(docDefinition).open();  
-}  
+
+  pdfMake.createPdf(docDefinition).open();
+}
 
 
 
