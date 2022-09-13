@@ -28,9 +28,7 @@ x:any ;
     Date:new FormControl('', [Validators.required ]),
     CustomerName:new FormControl('', [Validators.required ]),
     EmployeeName:new FormControl('', [Validators.required ]),
-    Products:new FormArray([
-
-    ])
+    Products:new FormArray([],[Validators.required ])
   })
 
 

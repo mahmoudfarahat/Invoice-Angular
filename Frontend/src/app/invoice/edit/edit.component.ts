@@ -5,6 +5,11 @@ import { InvoiceService } from './../../services/invoice.service';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Invoice } from 'src/app/models/inovice';
+import * as pdfMake from "pdfMake/build/pdfmake";
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+import { DatePipe } from '@angular/common'
+
+(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
 @Component({
   selector: 'app-edit',
@@ -20,10 +25,10 @@ export class EditComponent implements OnInit {
   Date:new FormControl('', [Validators.required ]),
   CustomerName:new FormControl('', [Validators.required ]),
   EmployeeName:new FormControl('', [Validators.required ]),
-  Products:new FormArray([  ])
+  Products:new FormArray([],[Validators.required])
 });
   invoice:Invoice  | any = {}
-  constructor(private service:InvoiceService , private router:Router
+  constructor(public datepipe: DatePipe, private service:InvoiceService , private router:Router
     ,private route:ActivatedRoute) {
 
  }
@@ -51,6 +56,8 @@ export class EditComponent implements OnInit {
     // console.log(this.productForm.get("inovoiceNumber"));
     return this.productForm.get("InovoiceNumber");
   }
+
+ 
 
   addProduct() {
     // this.products.push(this.newProduct());
@@ -130,4 +137,50 @@ id.value = price
 
 
 }
+generatePDF() {
+
+  let InvoiceNum:any =this.productForm.get("InovoiceNumber")?.value
+  let customer:any =this.productForm.get("CustomerName")?.value
+  let employee:any =this.productForm.get("EmployeeName")?.value
+  let getdate:any =this.productForm.get("Date")?.value
+  let date = this.datepipe.transform(getdate, 'yyyy-MM-dd')
+
+
+var docDefinition = {
+  content: [
+    { text:  `Invoice Number: ${InvoiceNum}` , fontSize: 15 },
+    { text:  ` ` , fontSize: 15 },
+    { text:  `Customer Name: ${this.customers.find((d:any)=> d.Id == customer).Name}` , fontSize: 15 },
+    { text:  ` ` , fontSize: 15 },
+    { text:  `Employee Name: ${this.employees.find((d:any)=> d.Id == employee).Name}` , fontSize: 15 },
+    { text:  ` ` , fontSize: 15 },
+    { text:  `Date: ${date}` , fontSize: 15 },
+    { text:  ` ` , fontSize: 15 },
+    {
+
+      layout: 'lightHorizontalLines', // optional
+
+      table: {
+
+        // headers are automatically repeated if the table spans over multiple pages
+        // you can declare how many rows should be treated as headers
+        headerRows: 1,
+        widths: [ '*', '*', '*', '*' ],
+
+        body: [
+          [ 'Product', 'Price', 'Quantity', 'Total' ],
+
+          ...(this.products.value as any[]).map(a=> [this.productList.find((d:any)=> d.Id == a.ProductName).Name , a.Price, a.Quantity, a.Total])
+
+        ]
+      }
+    }
+  ]
+};
+
+pdfMake.createPdf(docDefinition).open();
+}
+
+
+
 }
