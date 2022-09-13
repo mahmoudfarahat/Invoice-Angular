@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
 
   change()
   {
-    console.log("Fsaff")
+     
     this.editMode = true
   }
 

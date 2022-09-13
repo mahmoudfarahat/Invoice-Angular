@@ -24,7 +24,7 @@ x:any ;
   productList:any = []
   value: any ='';
    productForm = new FormGroup({
-    InovoiceNumber:new FormControl('', [Validators.required]),
+    InvoiceNumber:new FormControl('', [Validators.required]),
     Date:new FormControl('', [Validators.required ]),
     CustomerName:new FormControl('', [Validators.required ]),
     EmployeeName:new FormControl('', [Validators.required ]),
@@ -33,7 +33,7 @@ x:any ;
 
 
  public get InvoiceNumber() {
-     return this.productForm.get("InovoiceNumber");
+     return this.productForm.get("InvoiceNumber");
   }
 
   ngOnInit(): void {
@@ -134,7 +134,7 @@ onSubmit()
 
 generatePDF() {
 
-    let InvoiceNum:any =this.productForm.get("InovoiceNumber")?.value
+    let InvoiceNum:any =this.productForm.get("InvoiceNumber")?.value
     let customer:any =this.productForm.get("CustomerName")?.value
     let employee:any =this.productForm.get("EmployeeName")?.value
     let getdate:any =this.productForm.get("Date")?.value

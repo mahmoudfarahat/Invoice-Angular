@@ -54,7 +54,7 @@ export class EditComponent implements OnInit {
   }
   public get InvoiceNumber() {
     // console.log(this.productForm.get("inovoiceNumber"));
-    return this.productForm.get("InovoiceNumber");
+    return this.productForm.get("InvoiceNumber");
   }
 
  
@@ -139,7 +139,7 @@ id.value = price
 }
 generatePDF() {
 
-  let InvoiceNum:any =this.productForm.get("InovoiceNumber")?.value
+  let InvoiceNum:any =this.productForm.get("InvoiceNumber")?.value
   let customer:any =this.productForm.get("CustomerName")?.value
   let employee:any =this.productForm.get("EmployeeName")?.value
   let getdate:any =this.productForm.get("Date")?.value
