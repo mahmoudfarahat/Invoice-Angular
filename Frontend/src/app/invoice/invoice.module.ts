@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatNativeDateModule , MatRippleModule } from '@angular/material/core';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 const router:Routes = [
   {path:"" , component:ListComponent},
@@ -50,7 +51,8 @@ const router:Routes = [
     MatRippleModule,
     MatNativeDateModule,
     TooltipModule.forRoot(),
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    NgSelectModule
 
 
   ],

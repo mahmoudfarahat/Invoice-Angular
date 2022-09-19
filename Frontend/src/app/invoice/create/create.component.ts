@@ -23,6 +23,10 @@ docDefinition:any;
   employees:any = []
   customers:any = []
   productList:any = []
+
+  customerlist :[] = []
+  selectedCar: any = null;
+  
   value: any ='';
    productForm = new FormGroup({
     InvoiceNumber:new FormControl('', [Validators.required]),
@@ -93,19 +97,26 @@ docDefinition:any;
   getEmployees()
   {
 this.service.getEmployess().subscribe(response =>{
-  console.log(response)
+  // console.log(response)
   this.employees = response
 })
   }
 getcustomers()
 {this.service.getCustomers().subscribe(response =>{
-  console.log(response)
-  this.customers = response
+  this.customers = response 
+  this.customerlist = this.customers.map((a:any) =>  {
+    return {
+      id : a.Id,
+      name : a.Name
+    }
+  } )
+ 
+  console.log(this.customerlist)
 })}
 getProducts()
 {
   this.service.getProducts().subscribe(response =>{
-    console.log(response)
+    // console.log(response)
     this.productList = response
   })
 }
@@ -189,5 +200,13 @@ printPdf()
   pdfMake.createPdf(this.docDefinition).print();
 }
 
+
+
+cars = [
+    { id: 1, name: 'Volvo' },
+    { id: 2, name: 'Saab' },
+    { id: 3, name: 'Opel' },
+    { id: 4, name: 'Audi' },
+];
 
 }
