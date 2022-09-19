@@ -26,7 +26,7 @@ docDefinition:any;
 
   customerlist :[] = []
   selectedCar: any = null;
-  
+
   value: any ='';
    productForm = new FormGroup({
     InvoiceNumber:new FormControl('', [Validators.required]),
@@ -105,14 +105,14 @@ this.service.getEmployess().subscribe(response =>{
   }
 getcustomers()
 {this.service.getCustomers().subscribe(response =>{
-  this.customers = response 
+  this.customers = response
   this.customerlist = this.customers.map((a:any) =>  {
     return {
       id : a.Id,
       name : a.Name
     }
   } )
- 
+
   console.log(this.customerlist)
 })}
 getProducts()
@@ -189,14 +189,14 @@ generatePDF() {
 
 
 }
-<<<<<<< HEAD
+ 
 
 getrowTotal(g: FormArray)
 {
   console.log(g)
 }
 
-=======
+
 openPdf()
 {
   this.generatePDF()
@@ -219,5 +219,5 @@ cars = [
     { id: 4, name: 'Audi' },
 ];
 
->>>>>>> 6fa73dff2ae7e17985e7e3be0ff5555e3cd5237e
+
 }

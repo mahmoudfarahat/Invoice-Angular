@@ -40,7 +40,7 @@ export class EditComponent implements OnInit {
     this.getcustomers();
     this.getProducts();
 
- 
+
 
 
     this.route.params.subscribe(
@@ -64,7 +64,7 @@ export class EditComponent implements OnInit {
     return this.productForm.get("InvoiceNumber");
   }
 
- 
+
 
   addProduct() {
     // this.products.push(this.newProduct());
@@ -145,9 +145,7 @@ id.value = price
 
 }
 
-<<<<<<< HEAD
-
-=======
+ 
 getRowTotal(ab :AbstractControl , quantity:any , price:any)
 {
   let calculatedRow = quantity * price;
@@ -201,7 +199,7 @@ this.docDefinition = {
 
 
 }
- 
+
 openPdf()
 {
   this.generatePDF()
@@ -214,7 +212,7 @@ printPdf()
 
   pdfMake.createPdf(this.docDefinition).print();
 }
->>>>>>> 6fa73dff2ae7e17985e7e3be0ff5555e3cd5237e
+
 
 
 }

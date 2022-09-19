@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  
+
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <div class="row d-flex justify-content-start">
       <div class="col-9">
@@ -13,7 +13,6 @@
                     formControlName="InvoiceNumber" />
 
                   <!-- {{ incoive.?errors | json}} -->
-
                   <div class="text-danger" *ngIf="
                       InvoiceNumber?.errors! &&
                       InvoiceNumber?.touched &&
@@ -37,20 +36,17 @@
                     bsDatepicker />
                 </div>
 
-                
+
                 <div class="col-6">
                   <br />
                   <!--Using ng-option and for loop-->
-                  <ng-select [items]="customerlist" 
-                  bindLabel="name" 
-                  formControlName="CustomerName"
-                  bindValue="id" 
-                  [(ngModel)]="selectedCar">
+                  <ng-select [items]="customerlist" bindLabel="name" formControlName="CustomerName" bindValue="id"
+                    [(ngModel)]="selectedCar">
                   </ng-select>
- 
- <!--Using items input-->
 
-             
+                  <!--Using items input-->
+
+
 
                   <br />
                   <br />
@@ -119,82 +115,31 @@
         </div>
       </div>
 
-<<<<<<< HEAD
-
-        <div class="d-flex justify-content-between m-3">
-          <label  class="align-middle m-0   p-3" style="background-color: rgb(250, 240, 228) ; width: 350px;">Add Multiple Products</label>
-          <button class="btn btn-primary   " (click)="addProduct()"     type="button"    >Add Product</button>
-        </div>
-        <table class="  ms-5 " formArrayName="Products">
-
-          <tr *ngFor="let product of products.controls; let i = index"
 
 
 
-          [formGroupName]="i">
-            <td>
-
-          <select  (change)="onPriceChange($event,product)"   class="form-select" aria-label="Default select example"  formControlName="ProductName" >
 
 
-            <option selected disabled>choose Product</option>
-            <option   *ngFor="let item of productList;" [value]="item.Id">{{item!.Name}}</option>
 
-          </select>
-            </td>
-            <td>
-
-              <input #price type="text" placeholder="Price"
-
-              formControlName="Price"   class="form-control"
-
-              />
-
-
-            </td>
-
-            <td>
-
-              <input type="text"  placeholder="Quantity" formControlName="Quantity" class="form-control" />
-            </td>
-
-            <td>
-
-              <input type="text" placeholder="Total" formControlName="Total" #Total
-              [value]="getrowTotal(products)"
-              class="form-control" />
-            </td>
-            <td>
-              <label for="">   </label>
-              <button (click)="removeProduct(i)" class="btn btn-danger   ">
-                Remove
+        <div class="col-3 mt-5">
+          <div class="card">
+            <div class="card-body">
+              <button type="submit" class="btn btn-success" style="width: 100%" [disabled]="!productForm.valid">
+                Save
               </button>
-            </td>
-          </tr>
-        </table>
-        <div class="d-flex flex-row-reverse mt-5">
-          <button type="submit" class="btn btn-success btn-lg m-3"
+              <button type="button" class="btn btn-info mt-2" (click)="openPdf()" [disabled]="!productForm.valid"
+                style="width: 100%">
+                Open
+              </button>
+              <button type="button" class="btn btn-primary mt-2" (click)="printPdf()" style="width: 100%"
+                [disabled]="!productForm.valid">
+                Print
+              </button>
+            </div>
 
-          [disabled]="!productForm.valid">Save</button>
-=======
-      <div class="col-3 mt-5">
-        <div class="card">
-          <div class="card-body">
-            <button type="submit" class="btn btn-success" style="width: 100%" [disabled]="!productForm.valid">
-              Save
-            </button>
-            <button type="button" class="btn btn-info mt-2" (click)="openPdf()" [disabled]="!productForm.valid"
-              style="width: 100%">
-              Open
-            </button>
-            <button type="button" class="btn btn-primary mt-2" (click)="printPdf()"  style="width: 100%" [disabled]="!productForm.valid">
-              Print
-            </button>
           </div>
->>>>>>> 6fa73dff2ae7e17985e7e3be0ff5555e3cd5237e
         </div>
-      </div>
 
+      
+      <!-- </form> -->
     </div>
-  </form>
-</div>
