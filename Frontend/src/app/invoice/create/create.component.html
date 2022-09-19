@@ -106,7 +106,9 @@
 
             <td>
 
-              <input type="text" placeholder="Total" formControlName="Total" class="form-control" />
+              <input type="text" placeholder="Total" formControlName="Total" #Total
+              [value]="getrowTotal(products)"
+              class="form-control" />
             </td>
             <td>
               <label for="">   </label>

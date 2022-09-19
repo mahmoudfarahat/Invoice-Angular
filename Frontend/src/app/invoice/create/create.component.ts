@@ -98,6 +98,8 @@ export class CreateComponent implements OnInit {
 
   removeProduct(i:number) {
     this.products.removeAt(i);
+
+    console.log(this.productForm.get("Products")?.value.length)
   }
 
 
@@ -140,4 +142,10 @@ onPriceChange(event:any,ab :AbstractControl)
 
 
 }
+
+getrowTotal(g: FormArray)
+{
+  console.log(g)
+}
+
 }

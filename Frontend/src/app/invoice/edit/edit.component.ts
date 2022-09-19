@@ -32,11 +32,16 @@ export class EditComponent implements OnInit {
     this.getEmployees();
     this.getcustomers();
     this.getProducts();
+
+ 
+
+
     this.route.params.subscribe(
       params => {
           const id = +params['id'];
           this.getOneInvocie(id);
       }
+
   );
 
 
@@ -129,4 +134,8 @@ id.value = price
 
 
 }
+
+
+
+
 }
