@@ -10,13 +10,12 @@ export class AppComponent {
   title = '      invoiceTask         ';
 
   constructor(private config: NgSelectConfig) {
-    // this.config.notFoundText = 'Custom not found';
-    
-    // // set the bindValue to global config when you use the same
-    // // bindValue in most of the place.
-    // // You can also override bindValue for the specified template
-    // // by defining `bindValue` as property
-    // // Eg : <ng-select bindValue="some-new-value"></ng-select>
+    this.config.notFoundText = 'Custom not found';
+    // set the bindValue to global config when you use the same
+    // bindValue in most of the place.
+    // You can also override bindValue for the specified template
+    // by defining `bindValue` as property
+    // Eg : <ng-select bindValue="some-new-value"></ng-select>
     this.config.bindValue = 'value';
 }
 

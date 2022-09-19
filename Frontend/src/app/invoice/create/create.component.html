@@ -1,5 +1,5 @@
 <div class="container-fluid">
-
+<!-- {{this.productForm.value | json}} -->
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <div class="row d-flex justify-content-start">
       <div class="col-9">
@@ -40,7 +40,13 @@
                 <div class="col-6">
                   <br />
                   <!--Using ng-option and for loop-->
-                  <ng-select [items]="customerlist" bindLabel="name" formControlName="CustomerName" bindValue="id"
+                  <ng-select
+
+                  placeholder ="Choose Customer"
+                  [items]="customerlist"
+                   bindLabel="name"
+                    formControlName="CustomerName"
+                     bindValue="id"
                     [(ngModel)]="selectedCar">
                   </ng-select>
 
@@ -140,6 +146,6 @@
           </div>
         </div>
 
-      
+
       <!-- </form> -->
     </div>

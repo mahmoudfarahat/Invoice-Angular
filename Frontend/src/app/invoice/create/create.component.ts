@@ -189,7 +189,7 @@ generatePDF() {
 
 
 }
- 
+
 
 getrowTotal(g: FormArray)
 {
