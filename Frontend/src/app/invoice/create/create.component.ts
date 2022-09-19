@@ -1,95 +1,85 @@
 import { InvoiceService } from './../../services/invoice.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormBuilder, Validators, AbstractControl } from '@angular/forms'
 import { setTheme } from 'ngx-bootstrap/utils';
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common'
+import * as pdfMake from "pdfMake/build/pdfmake";
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+
+(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
+
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  styleUrls: ['./create.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CreateComponent implements OnInit {
-  productForm!: FormGroup;
+x:any ;
+docDefinition:any;
   employees:any = []
   customers:any = []
   productList:any = []
+
+  customerlist :[] = []
+  selectedCar: any = null;
+  
   value: any ='';
+   productForm = new FormGroup({
+    InvoiceNumber:new FormControl('', [Validators.required]),
+    Date:new FormControl('', [Validators.required ]),
+    CustomerName:new FormControl('', [Validators.required ]),
+    EmployeeName:new FormControl('', [Validators.required ]),
+    Products:new FormArray([],[Validators.required ])
+  })
 
 
  public get InvoiceNumber() {
-    // console.log(this.productForm.get("inovoiceNumber"));
-    return this.productForm.get("InovoiceNumber");
+     return this.productForm.get("InvoiceNumber");
   }
 
   ngOnInit(): void {
-
-    this.productForm = new FormGroup({
-      InovoiceNumber:new FormControl('', [Validators.required]),
-      Date:new FormControl('', [Validators.required ]),
-      CustomerName:new FormControl('', [Validators.required ]),
-      EmployeeName:new FormControl('', [Validators.required ]),
-      Products:new FormArray([  ])
-    })
-
-    this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
-
-  }
-
-
-
-
-
-  constructor(private fb:FormBuilder , private service :InvoiceService, private router:Router) {
     this.getEmployees();
     this.getcustomers();
     this.getProducts();
 
-    // this.productForm = this.fb.group({
 
-    //   InovoiceNumber:['', Validators.required ],
-    //   Date:[''],
-    //   CustomerName:['',Validators.required],
-    //   EmployeeName:['',Validators.required],
-    //   Products: this.fb.array([]) ,
-
-    // });
-
-    // this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
+    this.productForm.get("InvoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
 
 
 
   }
+
+
+
+
+
+
+  constructor(public datepipe: DatePipe,private fb:FormBuilder , private service :InvoiceService, private router:Router) {}
 
 
  get   products() : FormArray {
+
     return this.productForm.get("Products") as FormArray
   }
 
-  // newProduct(): FormGroup {
-  //   return this.fb.group({
-  //     ProductName: '',
-  //    Price: '',
-  //     Quantity: '',
-  //     Total: '',
-
-
-  //   })
-  // }
 
 
 
-  // ( this.form.get("list") as FormArray).push(new FormControl("",[Validators.required]));
+
 
 
   addProduct() {
-    // this.products.push(this.newProduct());
+
 
   (this.productForm.get("Products") as FormArray).push(new FormGroup({
     ProductName:new FormControl('', [Validators.required ]),
     Price:new FormControl('', [Validators.required ]),
-    Quantity:new FormControl('', [Validators.required ]),
-    Total:new FormControl('', [Validators.required ]),
+    Quantity:new FormControl(1, [Validators.required ]),
+    Total:new FormControl(0, [Validators.required ]),
 
   }));
 
@@ -104,48 +94,130 @@ export class CreateComponent implements OnInit {
 
 
 
-  onSubmit()
-  {
-    this.service.createInvocie(this.productForm.value).subscribe(res => {
-     this.router.navigate(["/"]);
-    })
-  }
+
 
   getEmployees()
   {
 this.service.getEmployess().subscribe(response =>{
-  console.log(response)
+  // console.log(response)
   this.employees = response
 })
   }
 getcustomers()
 {this.service.getCustomers().subscribe(response =>{
-  console.log(response)
-  this.customers = response
+  this.customers = response 
+  this.customerlist = this.customers.map((a:any) =>  {
+    return {
+      id : a.Id,
+      name : a.Name
+    }
+  } )
+ 
+  console.log(this.customerlist)
 })}
 getProducts()
 {
   this.service.getProducts().subscribe(response =>{
-    console.log(response)
+    // console.log(response)
     this.productList = response
   })
 }
 
 onPriceChange(event:any,ab :AbstractControl)
 {
-  console.log(ab);
    const price =this.productList.find((a:any) => a.Id === +event.target.value ).Price;
   (ab as FormGroup).get("Price")?.setValue(price);
+}
 
 
-// id.setValue(event.target.value)
+getRowTotal(ab :AbstractControl , quantity:any , price:any)
+{
+  let calculatedRow = quantity * price;
+   (ab as FormGroup).get("Total")?.setValue(calculatedRow)
+
+}
+
+
+onSubmit()
+{
+  this.service.createInvocie(this.productForm.value).subscribe(res => {
+   this.router.navigate(["/"]);
+  })
+}
+
+
+generatePDF() {
+
+    let InvoiceNum:any =this.productForm.get("InvoiceNumber")?.value
+    let customer:any =this.productForm.get("CustomerName")?.value
+    let employee:any =this.productForm.get("EmployeeName")?.value
+    let getdate:any =this.productForm.get("Date")?.value
+    let date = this.datepipe.transform(getdate, 'yyyy-MM-dd')
+
+
+    this.docDefinition = {
+    content: [
+      { text:  `Invoice Number: ${InvoiceNum}` , fontSize: 15 },
+      { text:  ` ` , fontSize: 15 },
+      { text:  `Customer Name: ${this.customers.find((d:any)=> d.Id == customer).Name}` , fontSize: 15 },
+      { text:  ` ` , fontSize: 15 },
+      { text:  `Employee Name: ${this.employees.find((d:any)=> d.Id == employee).Name}` , fontSize: 15 },
+      { text:  ` ` , fontSize: 15 },
+      { text:  `Date: ${date}` , fontSize: 15 },
+      { text:  ` ` , fontSize: 15 },
+      {
+
+        layout: 'lightHorizontalLines', // optional
+
+        table: {
+
+          // headers are automatically repeated if the table spans over multiple pages
+          // you can declare how many rows should be treated as headers
+          headerRows: 1,
+          widths: [ '*', '*', '*', '*' ],
+
+          body: [
+            [ 'Product', 'Price', 'Quantity', 'Total' ],
+
+            ...(this.products.value as any[]).map(a=> [this.productList.find((d:any)=> d.Id == a.ProductName).Name , a.Price, a.Quantity, a.Total])
+
+          ]
+        }
+      }
+    ]
+  };
 
 
 }
+<<<<<<< HEAD
 
 getrowTotal(g: FormArray)
 {
   console.log(g)
 }
 
+=======
+openPdf()
+{
+  this.generatePDF()
+  pdfMake.createPdf(this.docDefinition).open();
+
+}
+printPdf()
+{
+  this.generatePDF()
+
+  pdfMake.createPdf(this.docDefinition).print();
+}
+
+
+
+cars = [
+    { id: 1, name: 'Volvo' },
+    { id: 2, name: 'Saab' },
+    { id: 3, name: 'Opel' },
+    { id: 4, name: 'Audi' },
+];
+
+>>>>>>> 6fa73dff2ae7e17985e7e3be0ff5555e3cd5237e
 }

@@ -76,3 +76,18 @@
    </ngx-datatable>
 
 </div>
+
+
+
+
+    <p  *ngIf="!editMode"   (click)="editMode = true">{{ana.hello}}</p>
+
+    <span *ngIf="editMode">
+      <input value="{{ana.hello}}" >
+      <button  (click)=" editMode = false">Save</button>
+   <span>
+
+
+
+
+

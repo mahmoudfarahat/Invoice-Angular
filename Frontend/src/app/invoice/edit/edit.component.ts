@@ -2,16 +2,23 @@
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InvoiceService } from './../../services/invoice.service';
-import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators ,AbstractControl } from '@angular/forms';
 import { Invoice } from 'src/app/models/inovice';
+import * as pdfMake from "pdfMake/build/pdfmake";
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+import { DatePipe } from '@angular/common'
+
+(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  styleUrls: ['./edit.component.css'],
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EditComponent implements OnInit {
+  docDefinition:any ;
   employees:any= []
   customers:any= []
   productList:any= []
@@ -20,10 +27,10 @@ export class EditComponent implements OnInit {
   Date:new FormControl('', [Validators.required ]),
   CustomerName:new FormControl('', [Validators.required ]),
   EmployeeName:new FormControl('', [Validators.required ]),
-  Products:new FormArray([  ])
+  Products:new FormArray([],[Validators.required])
 });
   invoice:Invoice  | any = {}
-  constructor(private service:InvoiceService , private router:Router
+  constructor(public datepipe: DatePipe, private service:InvoiceService , private router:Router
     ,private route:ActivatedRoute) {
 
  }
@@ -54,8 +61,10 @@ export class EditComponent implements OnInit {
   }
   public get InvoiceNumber() {
     // console.log(this.productForm.get("inovoiceNumber"));
-    return this.productForm.get("InovoiceNumber");
+    return this.productForm.get("InvoiceNumber");
   }
+
+ 
 
   addProduct() {
     // this.products.push(this.newProduct());
@@ -112,6 +121,7 @@ getOneInvocie(id:any)
   })
 
   this.productForm.get("InovoiceNumber")?.addAsyncValidators(invoiceNumberValidator())
+
    for (const iterator of this.invoice.Products) {
     console.log(iterator);
     ( this.productForm.get("Products") as  FormArray).push(new FormGroup({
@@ -135,7 +145,76 @@ id.value = price
 
 }
 
+<<<<<<< HEAD
 
+=======
+getRowTotal(ab :AbstractControl , quantity:any , price:any)
+{
+  let calculatedRow = quantity * price;
+   (ab as FormGroup).get("Total")?.setValue(calculatedRow)
+
+}
+
+generatePDF() {
+
+  let InvoiceNum:any =this.productForm.get("InvoiceNumber")?.value
+  let customer:any =this.productForm.get("CustomerName")?.value
+  let employee:any =this.productForm.get("EmployeeName")?.value
+  let getdate:any =this.productForm.get("Date")?.value
+  let date = this.datepipe.transform(getdate, 'yyyy-MM-dd')
+
+
+this.docDefinition = {
+  content: [
+    { text:  `Invoice Number: ${InvoiceNum}` , fontSize: 15 },
+    { text:  ` ` , fontSize: 15 },
+    { text:  `Customer Name: ${this.customers.find((d:any)=> d.Id == customer).Name}` , fontSize: 15 },
+    { text:  ` ` , fontSize: 15 },
+    { text:  `Employee Name: ${this.employees.find((d:any)=> d.Id == employee).Name}` , fontSize: 15 },
+    { text:  ` ` , fontSize: 15 },
+    { text:  `Date: ${date}` , fontSize: 15 },
+    { text:  ` ` , fontSize: 15 },
+    {
+
+      layout: 'lightHorizontalLines', // optional
+
+      table: {
+
+        // headers are automatically repeated if the table spans over multiple pages
+        // you can declare how many rows should be treated as headers
+        headerRows: 1,
+        widths: [ '*', '*', '*', '*' ],
+
+        body: [
+          [ 'Product', 'Price', 'Quantity', 'Total' ],
+
+          ...(this.products.value as any[]).map(a=> [this.productList.find((d:any)=> d.Id == a.ProductName).Name , a.Price, a.Quantity, a.Total])
+
+        ]
+      }
+    }
+  ]
+};
+
+
+
+
+
+}
+ 
+openPdf()
+{
+  this.generatePDF()
+  pdfMake.createPdf(this.docDefinition).open();
+
+}
+printPdf()
+{
+  this.generatePDF()
+
+  pdfMake.createPdf(this.docDefinition).print();
+}
+>>>>>>> 6fa73dff2ae7e17985e7e3be0ff5555e3cd5237e
 
 
 }

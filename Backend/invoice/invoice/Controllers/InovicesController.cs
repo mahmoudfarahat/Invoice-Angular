@@ -87,7 +87,7 @@ namespace invoice.Controllers
         {
             var invoice = new Invoice()
             {
-                InvoiceNumber = dto.InovoiceNumber,
+                InvoiceNumber = dto.InvoiceNumber,
                 CustomerId = dto.CustomerName,
                 EmployeId = dto.EmployeeName,
                 Date = dto.Date,

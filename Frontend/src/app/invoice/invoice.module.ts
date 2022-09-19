@@ -8,12 +8,14 @@ import { ListComponent } from './list/list.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common'
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {MatNativeDateModule , MatRippleModule } from '@angular/material/core';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 const router:Routes = [
   {path:"" , component:ListComponent},
@@ -49,10 +51,11 @@ const router:Routes = [
     MatRippleModule,
     MatNativeDateModule,
     TooltipModule.forRoot(),
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    NgSelectModule
 
 
-  ]
-
+  ],
+  providers: [DatePipe],
 })
 export class InvoiceModule { }

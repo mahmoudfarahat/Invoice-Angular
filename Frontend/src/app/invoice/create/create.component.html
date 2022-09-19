@@ -1,71 +1,125 @@
-<div class="container">
-  <div class="d-flex justify-content-center mt-5">
-    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+<div class="container-fluid">
+  
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="row d-flex justify-content-start">
+      <div class="col-9">
+        <div class="d-flex mt-5">
+          <div class="card" style="width: 100%">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <br />
+                  <input placeholder="Invoice Number" type="text" value="" class="form-control"
+                    formControlName="InvoiceNumber" />
 
-    <div class="card" style="width: 1000px">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-6">
-            <label for="">Invoice Number</label>
-            <input type="text" value="" class="form-control" formControlName="InovoiceNumber"  />
+                  <!-- {{ incoive.?errors | json}} -->
 
-            <!-- {{ incoive.?errors | json}} -->
+                  <div class="text-danger" *ngIf="
+                      InvoiceNumber?.errors! &&
+                      InvoiceNumber?.touched &&
+                      InvoiceNumber?.dirty
+                    ">
+                    <div *ngIf="(InvoiceNumber?.errors)!['required']">
+                      Invoice Number is required
+                    </div>
+                    <div *ngIf="InvoiceNumber!; errors" style="margin-bottom: -24px">
+                      <div *ngIf="(InvoiceNumber?.errors)!['productExits']">
+                        Invoice Number is already in database
+                      </div>
+                    </div>
+                  </div>
 
+                  <!-- {{InvoiceNumber?.errors | json}} -->
+                  <br />
+                  <br />
 
+                  <input type="text" formControlName="Date" placeholder="Choose Date" class="form-control"
+                    bsDatepicker />
+                </div>
 
-            <div
-            *ngIf="InvoiceNumber?.errors! && InvoiceNumber?.touched
-            && InvoiceNumber?.dirty">
+                
+                <div class="col-6">
+                  <br />
+                  <!--Using ng-option and for loop-->
+                  <ng-select [items]="customerlist" 
+                  bindLabel="name" 
+                  formControlName="CustomerName"
+                  bindValue="id" 
+                  [(ngModel)]="selectedCar">
+                  </ng-select>
+ 
+ <!--Using items input-->
 
-              <div *ngIf="InvoiceNumber?.errors!['required']">
-                  the Invoice is required
-              </div>
-              <div *ngIf="InvoiceNumber!errors">
-                <div *ngIf="InvoiceNumber?.errors!['productExits']">
-                  is already in database
+             
+
+                  <br />
+                  <br />
+                  <select class="form-select" aria-label="Default select example" formControlName="EmployeeName">
+                    <option value="" selected disabled>Chosee Employe</option>
+                    <option *ngFor="let item of employees" [value]="item.Id">
+                      {{ item!.Name }}
+                    </option>
+                  </select>
+                </div>
               </div>
             </div>
 
+            <div class="d-flex flex-row-reverse m-3">
+              <button class="btn btn-primary" (click)="addProduct()" type="button">
+                Add Product
+              </button>
+            </div>
+            <table class="ms-2" formArrayName="Products">
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+              <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
+                <td>
+                  <select (change)="onPriceChange($event, product)" class="form-select"
+                    aria-label="Default select example" formControlName="ProductName">
+                    <option value="" selected disabled>Choose Product</option>
+                    <option *ngFor="let item of productList" [value]="item.Id">
+                      {{ item!.Name }}
+                    </option>
+                  </select>
+                </td>
+                <td>
+                  <input #price type="number" placeholder="Price" formControlName="Price" class="form-control" />
+                </td>
 
-          </div>
+                <td>
+                  <input #quantity type="number" placeholder="Quantity" formControlName="Quantity"
+                    class="form-control" />
+                </td>
 
-
-
-            {{InvoiceNumber?.errors | json}}
-            <label for="">Date</label>
-
-
-
-
-                <input type="text" formControlName="Date"
-                       placeholder="Choose Date"
-                       class="form-control"
-                       bsDatepicker>
-
-
-
-
-
-          </div>
-          <div class="col-6">
+                <td>
+                  <input #total type="text" placeholder="Total"
+                    [value]="getRowTotal(product, price.value, quantity.value)" formControlName="Total"
+                    class="form-control" />
+                </td>
+                <td>
+                  <label for=""> </label>
+                  <button (click)="removeProduct(i)" class="btn btn-danger">
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            </table>
             <br />
-            <select class="form-select" aria-label="Default select example"formControlName="CustomerName">
-              <option selected>choose customer</option>
-              <option   *ngFor="let item of customers;" [value]="item.Id" >{{item!.Name}}</option>
-            </select>
-
-            <br />
-
-            <select class="form-select" aria-label="Default select example" formControlName="EmployeeName">
-
-
-              <option value="" selected disabled>Chosee Employe</option>
-                <option   *ngFor="let item of employees;" [value]="item.Id">{{item!.Name}}</option>
-            </select>
+            <hr />
+            <div class="p-2">
+              <strong>Additional Notes</strong>
+              <textarea name="" id="" style=" width:100%;" cols="122" rows="3"></textarea>
+            </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 
         <div class="d-flex justify-content-between m-3">
           <label  class="align-middle m-0   p-3" style="background-color: rgb(250, 240, 228) ; width: 350px;">Add Multiple Products</label>
@@ -122,18 +176,25 @@
           <button type="submit" class="btn btn-success btn-lg m-3"
 
           [disabled]="!productForm.valid">Save</button>
+=======
+      <div class="col-3 mt-5">
+        <div class="card">
+          <div class="card-body">
+            <button type="submit" class="btn btn-success" style="width: 100%" [disabled]="!productForm.valid">
+              Save
+            </button>
+            <button type="button" class="btn btn-info mt-2" (click)="openPdf()" [disabled]="!productForm.valid"
+              style="width: 100%">
+              Open
+            </button>
+            <button type="button" class="btn btn-primary mt-2" (click)="printPdf()"  style="width: 100%" [disabled]="!productForm.valid">
+              Print
+            </button>
+          </div>
+>>>>>>> 6fa73dff2ae7e17985e7e3be0ff5555e3cd5237e
         </div>
-
-
-
-
+      </div>
 
     </div>
   </form>
-
-  </div>
-  {{this.productForm.value | json}}
 </div>
-
-
-

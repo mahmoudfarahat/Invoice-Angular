@@ -11,7 +11,7 @@ namespace invoice.DTO
     {
   
 
-        public int InovoiceNumber { get; set; }
+        public int InvoiceNumber { get; set; }
 
       
         public DateTime Date { get; set; }
