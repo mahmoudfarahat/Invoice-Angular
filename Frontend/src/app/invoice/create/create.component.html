@@ -47,7 +47,7 @@
                    bindLabel="name"
                     formControlName="CustomerName"
                      bindValue="id"
-                    [(ngModel)]="selectedCar">
+                    [(ngModel)]="selectedCustomer">
                   </ng-select>
 
                   <!--Using items input-->
@@ -56,12 +56,16 @@
 
                   <br />
                   <br />
-                  <select class="form-select" aria-label="Default select example" formControlName="EmployeeName">
-                    <option value="" selected disabled>Chosee Employe</option>
-                    <option *ngFor="let item of employees" [value]="item.Id">
-                      {{ item!.Name }}
-                    </option>
-                  </select>
+                  <ng-select
+
+                  placeholder ="Choose Employe"
+                  [items]="employelist"
+                   bindLabel="name"
+                    formControlName="EmployeeName"
+                     bindValue="id"
+                    [(ngModel)]="selectedEmployee">
+                  </ng-select>
+
                 </div>
               </div>
             </div>
@@ -81,6 +85,7 @@
               </tr>
               <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
                 <td>
+
                   <select (change)="onPriceChange($event, product)" class="form-select"
                     aria-label="Default select example" formControlName="ProductName">
                     <option value="" selected disabled>Choose Product</option>

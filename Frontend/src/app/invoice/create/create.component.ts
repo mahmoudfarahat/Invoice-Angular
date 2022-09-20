@@ -23,9 +23,12 @@ docDefinition:any;
   employees:any = []
   customers:any = []
   productList:any = []
-
+  employelist :[] =[]
   customerlist :[] = []
+  productlist: []= []
   selectedCar: any = null;
+  selectedCustomer: any =null
+  selectedEmployee:any = null
 
   value: any ='';
    productForm = new FormGroup({
@@ -101,6 +104,14 @@ docDefinition:any;
 this.service.getEmployess().subscribe(response =>{
   // console.log(response)
   this.employees = response
+
+
+  this.employelist = this.employees.map((a:any) =>  {
+    return {
+      id : a.Id,
+      name : a.Name
+    }
+  } )
 })
   }
 getcustomers()
@@ -120,6 +131,12 @@ getProducts()
   this.service.getProducts().subscribe(response =>{
     // console.log(response)
     this.productList = response
+    this.productlist = this.productList.map((a:any) =>  {
+      return {
+        id : a.Id,
+        name : a.Name
+      }
+    } )
   })
 }
 
