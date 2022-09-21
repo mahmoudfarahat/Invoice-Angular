@@ -38,7 +38,9 @@ docDefinition:any;
     EmployeeName:new FormControl('', [Validators.required ]),
     Products:new FormArray([],[Validators.required ])
   })
-
+  imageForm = new FormGroup({
+    myName:new FormControl('',)
+  })
 
  public get InvoiceNumber() {
      return this.productForm.get("InvoiceNumber");
@@ -55,8 +57,16 @@ docDefinition:any;
 
 
   }
+// imageSrc :any 
+//   onSubmit2()
+//   {
+ 
+//     this.service.getimage(this.imageForm.value?.myName).subscribe(res => {
+      
+//       this.imageSrc = res
 
-
+//     })
+//   }
 
 
 
@@ -173,7 +183,10 @@ generatePDF() {
 
 
     this.docDefinition = {
+       
     content: [
+
+
       { text:  `Invoice Number: ${InvoiceNum}` , fontSize: 15 },
       { text:  ` ` , fontSize: 15 },
       { text:  `Customer Name: ${this.customers.find((d:any)=> d.Id == customer).Name}` , fontSize: 15 },

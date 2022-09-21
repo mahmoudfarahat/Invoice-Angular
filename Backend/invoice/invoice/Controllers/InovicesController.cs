@@ -7,6 +7,10 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Data.Entity;
+using System.Drawing;
+using System.IO;
+using System.Drawing.Imaging;
+using System.Web.Hosting;
 
 namespace invoice.Controllers
 {
@@ -15,20 +19,22 @@ namespace invoice.Controllers
         ApplicationDbContext db = new ApplicationDbContext();
 
         [HttpGet]
-        public IHttpActionResult Index(int start = 0 , int length=10)
+        public IHttpActionResult Index(int start = 0, int length = 10)
         {
 
             //var query = db.InvoiceDetails.Include(a => a.Invoice).Include(a => a.Product).
             //    OrderBy(a=> a.ID).Skip(start).Take(length).Select(a=> new {a.Price , a.Product.Name , a.Invoice.InvoiceNumber });
 
-           
+
             var query = db.Invoices.OrderBy(a => a.ID).Skip(start).Take(length)
                 .Include(a => a.InvoiceDetails)
-                .Select(a => new {ID = a.ID,
-                    InvoiceNumber= a.InvoiceNumber,
-                           Date =         a.Date,
-                      Products =a.InvoiceDetails.Select(m => new {m.Price , m.Product.Name , m.ProductID }),
-                
+                .Select(a => new
+                {
+                    ID = a.ID,
+                    InvoiceNumber = a.InvoiceNumber,
+                    Date = a.Date,
+                    Products = a.InvoiceDetails.Select(m => new { m.Price, m.Product.Name, m.ProductID }),
+
                 });
 
             //List<InvoiceSelectDTO> list = new List<InvoiceSelectDTO>();
@@ -38,7 +44,7 @@ namespace invoice.Controllers
             //    var singleInvoice = new InvoiceSelectDTO()
             //    {
             //        //ID = item.ID,
-              
+
 
             //    };
 
@@ -52,13 +58,13 @@ namespace invoice.Controllers
             //    //}
 
             //    list.Add(singleInvoice);
-               
+
             //}
 
 
             var counter = db.Invoices.Count();
 
-            return Ok(new { data = query, recordsFiltered  = counter});
+            return Ok(new { data = query, recordsFiltered = counter });
         }
 
         public class InvoiceSelectDTO
@@ -78,8 +84,8 @@ namespace invoice.Controllers
             public string ProductName { get; set; }
             public decimal Price { get; set; }
         }
-        
-       
+
+
 
 
         [HttpPost]
@@ -96,41 +102,48 @@ namespace invoice.Controllers
             };
             foreach (var item in dto.Products)
             {
-                invoice.InvoiceDetails.Add(new InvoiceDetails() { ProductID = item.ProductName ,Price =item.Price,
-                Quantity= item.Quantity  
+                invoice.InvoiceDetails.Add(new InvoiceDetails()
+                {
+                    ProductID = item.ProductName,
+                    Price = item.Price,
+                    Quantity = item.Quantity
                 });
 
             }
 
             db.Invoices.Add(invoice);
             db.SaveChanges();
-           return Ok(new { invoice.ID, invoice.Total, invoice.EmployeId });
+            return Ok(new { invoice.ID, invoice.Total, invoice.EmployeId });
         }
 
         [HttpGet]
 
         public IHttpActionResult Edit(int id)
         {
-            return Ok(db.Invoices.Include(a => a.InvoiceDetails).Select(a => new {
+            return Ok(db.Invoices.Include(a => a.InvoiceDetails).Select(a => new
+            {
                 ID = a.ID,
                 InvoiceNumber = a.InvoiceNumber,
                 Date = a.Date,
-                EmployeId =  a.EmployeId,
+                EmployeId = a.EmployeId,
                 CustomerId = a.CustomerId,
                 Products = a.InvoiceDetails
-                .Select(m => new { m.Price, m.Product.Name , m.ProductID }),
+                .Select(m => new { m.Price, m.Product.Name, m.ProductID }),
 
-            }).FirstOrDefault(a => a.ID== id));
+            }).FirstOrDefault(a => a.ID == id));
         }
 
 
-        [HttpDelete ]
+        [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
             Invoice invoice = db.Invoices.Find(id);
             db.Invoices.Remove(invoice);
             db.SaveChanges();
-            return Ok( new {  message ="Inovice has been deleted" });
+            return Ok(new { message = "Inovice has been deleted" });
         }
+
+
+       
     }
 }

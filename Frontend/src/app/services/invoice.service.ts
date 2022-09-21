@@ -57,4 +57,9 @@ deleteInvoice(id:any)
 
 }
 
+
+// getimage(data:any)
+// {
+//   return this.http.get(environment.apiUrl + "Image?name=" + data)
+// }
 }
