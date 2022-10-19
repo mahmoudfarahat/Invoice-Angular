@@ -1,0 +1,12 @@
+<ng-container *ngIf="!EmployeeService.selectedEmployee"> Create </ng-container>
+
+<ng-container *ngIf="EmployeeService.selectedEmployee"> Edit </ng-container>
+
+<form [formGroup]="EmployeeService.form">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" formControlName="Name" />
+  </div>
+
+  <button class="btn btn-primary">Submit</button>
+</form>

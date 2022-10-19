@@ -6,8 +6,12 @@ const routes: Routes = [
   {
     path:"",component:MainLayoutComponent , loadChildren:()=>
     import("../app/invoice/invoice.module").then(m=>m.InvoiceModule)
+  },
+  {
+    path:"employee",
+    loadChildren:()=> import("./employee/employee.module").then(m=> m.EmployeeModule)
   }
-   
+
 
 ];
 
