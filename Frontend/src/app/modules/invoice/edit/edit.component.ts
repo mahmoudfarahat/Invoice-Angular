@@ -1,5 +1,5 @@
 // import { invoice } from './../../models/inovice';
-import { invoiceNumberValidator } from 'src/app/async.valdiator';
+import { invoiceNumberValidator } from 'src/app/validators/async.valdiator';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';

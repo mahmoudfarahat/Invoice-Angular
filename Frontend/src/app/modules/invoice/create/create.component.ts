@@ -2,7 +2,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormBuilder, Validators, AbstractControl } from '@angular/forms'
 
-import { invoiceNumberValidator } from 'src/app/async.valdiator';
+import { invoiceNumberValidator } from 'src/app/validators/async.valdiator';
 import { Router } from '@angular/router';
 import { DatePipe } from '@angular/common'
 import * as pdfMake from "pdfMake/build/pdfmake";
