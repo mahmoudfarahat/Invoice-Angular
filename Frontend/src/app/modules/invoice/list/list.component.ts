@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ColumnMode } from '@swimlane/ngx-datatable';
-import { InvoiceService } from 'src/app/services/invoice.service';
+import { InvoiceService } from 'src/app/services/invoice/invoice.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -60,7 +60,7 @@ columnMode:ColumnMode = ColumnMode.force;
     }
   });
   }
- 
+
 
   deleteInvoice(id:any){
 this.invoice.deleteInvoice(id).subscribe(res=> {

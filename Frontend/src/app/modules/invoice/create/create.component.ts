@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 import { DatePipe } from '@angular/common'
 import * as pdfMake from "pdfMake/build/pdfmake";
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
-import { InvoiceService } from 'src/app/services/invoice.service';
+import { InvoiceService } from 'src/app/services/invoice/invoice.service';
 
 (<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 

@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
 import { CreateComponent } from './create/create.component';
-import { EmployeeService } from 'src/app/services/employee.service';
+import { EmployeeService } from 'src/app/services/employee/employee.service';
 
 
 const route:Routes = [

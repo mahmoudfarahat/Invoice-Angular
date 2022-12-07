@@ -8,8 +8,8 @@ import { FormArray, FormControl, FormGroup, Validators ,AbstractControl } from '
 import * as pdfMake from "pdfMake/build/pdfmake";
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import { DatePipe } from '@angular/common'
-import { InvoiceService } from 'src/app/services/invoice.service';
-import { Invoice } from 'src/app/services/models/inovice';
+import { InvoiceService } from 'src/app/services/invoice/invoice.service';
+import { Invoice } from 'src/app/services/invoice/inovice';
 
 (<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
