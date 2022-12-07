@@ -1,12 +1,13 @@
-import { InvoiceService } from './../../services/invoice.service';
+
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormBuilder, Validators, AbstractControl } from '@angular/forms'
-import { setTheme } from 'ngx-bootstrap/utils';
+
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
 import { Router } from '@angular/router';
 import { DatePipe } from '@angular/common'
 import * as pdfMake from "pdfMake/build/pdfmake";
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+import { InvoiceService } from 'src/app/services/invoice.service';
 
 (<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
@@ -57,12 +58,12 @@ docDefinition:any;
 
 
   }
-// imageSrc :any 
+// imageSrc :any
 //   onSubmit2()
 //   {
- 
+
 //     this.service.getimage(this.imageForm.value?.myName).subscribe(res => {
-      
+
 //       this.imageSrc = res
 
 //     })
@@ -183,7 +184,7 @@ generatePDF() {
 
 
     this.docDefinition = {
-       
+
     content: [
 
 

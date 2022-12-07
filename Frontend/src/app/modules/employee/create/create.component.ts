@@ -1,6 +1,7 @@
-import { EmployeeService } from './../../services/employee.service';
+
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
   selector: 'app-create',
@@ -9,17 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private ActivatedRoute:ActivatedRoute, public EmployeeService:EmployeeService) { }
+  constructor(private ActivatedRoute:ActivatedRoute, public employeeService:EmployeeService) { }
 
   ngOnInit(): void {
-  
+
     this.ActivatedRoute.params.subscribe(a=>{
       if(a["id"]){
-        this.EmployeeService.getSelectedEmployee(a["id"]);
+        this.employeeService.getSelectedEmployee(a["id"]);
       }
       else{
-        this.EmployeeService.selectedEmployee = null;
-        this.EmployeeService.form.patchValue({Id:"", Name:""});
+        this.employeeService.selectedEmployee = null;
+        this.employeeService.form.patchValue({Id:"", Name:""});
       }
     });
   }

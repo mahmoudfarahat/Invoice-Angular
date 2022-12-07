@@ -1,13 +1,15 @@
 // import { invoice } from './../../models/inovice';
 import { invoiceNumberValidator } from 'src/app/async.valdiator';
 import { ActivatedRoute, Router } from '@angular/router';
-import { InvoiceService } from './../../services/invoice.service';
+
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators ,AbstractControl } from '@angular/forms';
-import { Invoice } from 'src/app/models/inovice';
+
 import * as pdfMake from "pdfMake/build/pdfmake";
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import { DatePipe } from '@angular/common'
+import { InvoiceService } from 'src/app/services/invoice.service';
+import { Invoice } from 'src/app/services/models/inovice';
 
 (<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
@@ -145,7 +147,7 @@ id.value = price
 
 }
 
- 
+
 getRowTotal(ab :AbstractControl , quantity:any , price:any)
 {
   let calculatedRow = quantity * price;

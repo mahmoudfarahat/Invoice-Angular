@@ -1,6 +1,6 @@
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { SharedModule } from './shared/shared.module';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -13,6 +13,7 @@ import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 
  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TrimPipe } from './trim.pipe';
+import { SharedModule } from './modules/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,

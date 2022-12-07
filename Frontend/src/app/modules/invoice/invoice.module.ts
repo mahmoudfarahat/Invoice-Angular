@@ -4,7 +4,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { Routes , RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListComponent } from './list/list.component';
+
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,6 +16,7 @@ import {MatNativeDateModule , MatRippleModule } from '@angular/material/core';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { ListComponent } from './list/list.component';
 
 const router:Routes = [
   {path:"" , component:ListComponent},

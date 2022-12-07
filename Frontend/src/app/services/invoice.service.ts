@@ -1,8 +1,9 @@
-import { Invoice } from './../models/inovice';
+
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from '../models/products';
+import { Product, Invoice } from './models/inovice';
+
 
 @Injectable({
   providedIn: 'root'

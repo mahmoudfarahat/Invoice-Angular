@@ -1,15 +1,16 @@
-import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainLayoutComponent } from './modules/shared/main-layout/main-layout.component';
 
 const routes: Routes = [
   {
     path:"",component:MainLayoutComponent , loadChildren:()=>
-    import("../app/invoice/invoice.module").then(m=>m.InvoiceModule)
+    import("../app/modules/invoice/invoice.module").then(m=>m.InvoiceModule)
   },
   {
     path:"employee",
-    loadChildren:()=> import("./employee/employee.module").then(m=> m.EmployeeModule)
+    loadChildren:()=> import("./modules/employee/employee.module").then(m=> m.EmployeeModule)
   }
 
 
