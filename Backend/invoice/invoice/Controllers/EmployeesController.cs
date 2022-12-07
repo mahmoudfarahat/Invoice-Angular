@@ -18,6 +18,13 @@ namespace invoice.Controllers
              
               return  Ok(db.Employees.ToList()) ;
           }
+        [HttpGet()]
+        public IHttpActionResult GetByID(int ID)
+        {
+          var employee =  db.Employees.Find(ID);
+            return Ok(employee);
+
+        }
 
         public IHttpActionResult Create(Employe employe)
         {
@@ -25,6 +32,18 @@ namespace invoice.Controllers
          db.SaveChanges();
          return Ok(employe);
         }
+        [HttpPut]
+        public IHttpActionResult Edit(int ID, Employe employe)
+        {
+          var employee =   db.Employees.FirstOrDefault(a => a.Id == ID);
+            employee.Name = employe.Name;
+            db.SaveChanges();
+            return Ok(employe);
+
+
+        }
+
+        
 
     }
 }

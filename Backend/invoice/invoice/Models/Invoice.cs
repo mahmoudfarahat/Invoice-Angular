@@ -52,7 +52,7 @@ namespace invoice.Models
         public decimal Price { get; set; }
 
 
-        public decimal Total { get => Quantity * Price; }
+        //public decimal Total { get => Quantity * Price; }
 
 
 
