@@ -10,7 +10,7 @@
                 <div class="col-6">
                   <br />
                   <input placeholder="Invoice Number" type="text" value="" class="form-control"
-                    formControlName="InvoiceNumber" />
+                    formControlName="InvoiceNumber" id="InvoiceNumber"/>
 
                   <!-- {{ incoive.?errors | json}} -->
                   <div class="text-danger" *ngIf="
@@ -33,7 +33,8 @@
                   <br />
 
                   <input type="text" formControlName="Date" placeholder="Choose Date" class="form-control"
-                    bsDatepicker />
+                  id="Date"
+                  bsDatepicker />
                 </div>
 
 
@@ -41,7 +42,7 @@
                   <br />
                   <!--Using ng-option and for loop-->
                   <ng-select
-
+                      id="Customer"
                   placeholder ="Choose Customer"
                   [items]="customerlist"
                    bindLabel="name"
@@ -57,7 +58,7 @@
                   <br />
                   <br />
                   <ng-select
-
+                    id="Employee"
                   placeholder ="Choose Employe"
                   [items]="employelist"
                    bindLabel="name"
