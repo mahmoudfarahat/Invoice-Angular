@@ -7,6 +7,8 @@
           <div class="card" style="width: 100%">
             <div class="card-body">
               <div class="row">
+
+
                 <div class="col-6">
                   <br />
                   <input placeholder="Invoice Number" type="text" value="" class="form-control"
@@ -87,7 +89,7 @@
               <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
                 <td>
 
-                  <select (change)="onPriceChange($event, product)" class="form-select"
+                  <select id="products" (change)="onPriceChange($event, product)" class="form-select"
                     aria-label="Default select example" formControlName="ProductName">
                     <option value="" selected disabled>Choose Product</option>
                     <option *ngFor="let item of productList" [value]="item.Id">
