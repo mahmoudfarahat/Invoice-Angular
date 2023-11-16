@@ -31,7 +31,7 @@
  -->
 <div class="container">
   <div class="d-flex flex-row-reverse mt-5">
-    <a class="btn btn-success btn-lg  "routerLink="create">Create</a>
+    <a class="btn btn-success btn-lg  " mat-raised-button color="primary" routerLink="create">Create</a>
   </div>
    <ngx-datatable
   class="bootstrap"
@@ -66,9 +66,11 @@
   <ngx-datatable-column name="" [width]="70" [resizeable]="false"  [sortable]="false">
     <ng-template let-row="row" ngx-datatable-cell-template>
       <!-- {{row.id}} -->
-     <a class="btn btn-primary" [routerLink]="['edit',row.ID]">Edit</a> |
+     <a mat-raised-button color="primary" [routerLink]="['edit',row.ID]">Edit</a>
 
-     <button class="btn btn-danger"  (click)="deleteInvoice(row.ID)">Delete</button>
+
+
+     <button mat-raised-button color="warn" class="mx-2" (click)="deleteInvoice(row.ID)">Delete</button>
     </ng-template>
   </ngx-datatable-column>
 
@@ -80,7 +82,7 @@
 
 
 
-    <p  *ngIf="!editMode"   (click)="editMode = true">{{ana.hello}}</p>
+    <!-- <p  *ngIf="!editMode"   (click)="editMode = true">{{ana.hello}}</p>
 
     <span *ngIf="editMode">
       <input value="{{ana.hello}}" >
@@ -88,6 +90,6 @@
    <span>
 
 
-
+ -->
 
 
