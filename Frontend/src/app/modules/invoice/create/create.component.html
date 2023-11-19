@@ -111,18 +111,24 @@
                   </select>
                 </td>
                 <td>
-                  <input #price type="number" placeholder="Price" formControlName="Price" class="form-control" />
+                  <mat-form-field class="example-full-width">
+                    <input #price  matInput placeholder="Price" type="number" formControlName="Price" id="InvoiceNumber" >
+                 </mat-form-field>
+                 </td>
+
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input #quantity  matInput placeholder="Quantity" type="number" formControlName="Quantity" id="InvoiceNumber" >
+                 </mat-form-field>
                 </td>
 
                 <td>
-                  <input #quantity type="number" placeholder="Quantity" formControlName="Quantity"
-                    class="form-control" />
-                </td>
+                  <mat-form-field class="example-full-width">
+                    <input #total  matInput placeholder="Quantity" type="number" formControlName="Total"
+                    [value]="getRowTotal(product, price.value, quantity.value)" >
+                 </mat-form-field>
 
-                <td>
-                  <input #total type="text" placeholder="Total"
-                    [value]="getRowTotal(product, price.value, quantity.value)" formControlName="Total"
-                    class="form-control" />
+                
                 </td>
                 <td>
                   <label for=""> </label>
