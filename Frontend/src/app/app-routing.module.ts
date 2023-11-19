@@ -9,7 +9,7 @@ const routes: Routes = [
     import("../app/modules/invoice/invoice.module").then(m=>m.InvoiceModule)
   },
   {
-    path:"employee",
+    path:"employee" ,component:MainLayoutComponent,
     loadChildren:()=> import("./modules/employee/employee.module").then(m=> m.EmployeeModule)
   }
 

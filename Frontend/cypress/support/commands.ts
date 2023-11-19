@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
+
+import * as cypress from "cypress";
+
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -35,3 +38,24 @@
 //     }
 //   }
 // }
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      getById: (id: string) => Chainable<Element>;
+    }
+  }
+}
+
+Cypress.Commands.add('submit',()=>{
+  cy.get('form button[type="submit"').click();
+})
+
+
+Cypress.Commands.addQuery('getById', (id)=>{
+ const getFn =  () => cy.now('get',`[data-cy="${id}"]`)
+  return () => {
+    // return cy.get(`[data-cy="${id}"]`)
+   return  getFn();
+    // return cy.get()
+  }
+});

@@ -1,9 +1,25 @@
 /// <reference types="Cypress" />
 
+before(()=>{
+  //  Runs only once, before all tests
+});
+beforeEach(()=>{
+  // Runs before every test (i.e., it's repeated)
+});
 
-describe('Employee',()=>{
-  it('Chechk Validation',()=>{
-    cy.visit('http://localhost:4200/employee/create');
+afterEach(()=>{
+  // run after every test
+})
+after(()=>{
+  // Runs after all tests
+})
+describe('Employee', {},()=>{
+  beforeEach(()=>{});
+  it('Chechk Validation',{defaultCommandTimeout:10000},()=>{
+    cy.task('seedDatabase','filename.csv').then( returnValue =>{
+      
+    });
+    cy.visit('/employee/create');
     cy.get('[data-cy="employee-form"]').click();
     cy.get('[data-cy="employee-form"]').then(el =>{
       expect(el).to.not.have.attr('disabled');
@@ -15,18 +31,19 @@ describe('Employee',()=>{
 expect(el.attr('class')).to.contain('invalid');
     })
 cy.get('[data-cy="employee-input-birthdate"]').focus().blur()
-cy.get('[data-cy="employee-input-birthdate"]').then(el =>{
-  expect(el.attr('class')).to.contain('invalid');
-      })
+cy.get('[data-cy="employee-input-birthdate"]').should('have.attr','class').and('match',/invalid/)
+
 cy.get('[data-cy="employee-input-phone"]').focus().blur()
-cy.get('[data-cy="employee-input-phone"]').then(el =>{
+cy.get('[data-cy="employee-input-phone"]').should(el =>{
   expect(el.attr('class')).to.contain('invalid');
       })
 cy.get('[data-cy="employee-input-code"]').focus().blur()
 cy.get('[data-cy="employee-input-code"]').then(el =>{
   expect(el.attr('class')).to.contain('invalid');
+
       })
 
+      cy.screenshot();
 // cy.get('[data-cy="employee-input-code"]').parent().children()
 
 
