@@ -25,7 +25,7 @@ namespace invoice.Controllers
             return Ok(employee);
 
         }
-
+        [HttpPost()]
         public IHttpActionResult Create(Employe employe)
         {
          db.Employees.Add(employe);

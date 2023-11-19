@@ -14,8 +14,7 @@ namespace invoice.Controllers
         [HttpGet]
         public IHttpActionResult Index()
         {
-
-            return Ok(db.Products.ToList());
+            return Ok(db.Products.Select(p => new {  id = p.Id, name = p.Name, price = p.Price }).ToList());
         }
                 [HttpGet]
         public IHttpActionResult Get(int id)
