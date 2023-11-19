@@ -100,15 +100,21 @@
                 <th>Action</th>
               </tr>
               <tr *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
-                <td>
+                <td    >
+                  <ng-select
 
-                  <select id="products" (change)="onPriceChange($event, product)" class="form-select"
-                    aria-label="Default select example" formControlName="ProductName">
-                    <option value="" selected disabled>Choose Product</option>
-                    <option *ngFor="let item of productList" [value]="item.Id">
-                      {{ item!.Name }}
-                    </option>
-                  </select>
+                  id="Employee"
+                  style="width: 150px;"
+                [items]="productList"
+                 bindLabel="name"
+                  formControlName="ProductName"
+                   bindValue="id"
+
+                   (change)="onPriceChange($event, product)"
+
+                  >
+                </ng-select>
+
                 </td>
                 <td>
                   <mat-form-field class="example-full-width">
@@ -128,7 +134,7 @@
                     [value]="getRowTotal(product, price.value, quantity.value)" >
                  </mat-form-field>
 
-                
+
                 </td>
                 <td>
                   <label for=""> </label>

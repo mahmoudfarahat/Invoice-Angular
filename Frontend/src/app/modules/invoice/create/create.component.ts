@@ -153,7 +153,8 @@ getProducts()
 
 onPriceChange(event:any,ab :AbstractControl)
 {
-   const price =this.productList.find((a:any) => a.Id === +event.target.value ).Price;
+
+   const price =this.productList.find((a:any) => a.id === +event.id ).price;
   (ab as FormGroup).get("Price")?.setValue(price);
 }
 
