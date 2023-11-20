@@ -10,16 +10,10 @@
                 <div class="col-6">
 
                   <br />
-<<<<<<< HEAD
                   <mat-form-field class="example-full-width">
                   <input  matInput readonly type="text" value="{{ invoice.InvoiceNumber }}"
                     formControlName="InvoiceNumber" />
                   </mat-form-field   >
-=======
-                  <input readonly type="text" value="{{ invoice.InvoiceNumber }}" class="form-control"
-                    formControlName="InvoiceNumber" />
-
->>>>>>> 914b1da2d3f4b3a3362751c5b2176c73c5a6305b
                   <!-- {{ incoive.?errors | json}} -->
 
                   <div *ngIf="
@@ -40,7 +34,6 @@
                   <!-- {{ InvoiceNumber?.errors | json }} -->
                   <br />
                   <br />
-<<<<<<< HEAD
                   <mat-form-field appearance="fill"  class="example-full-width">
                     <mat-label>Choose a date</mat-label>
                     <input matInput [matDatepicker]="picker"  formControlName="Date"  id="Date" value="{{ invoice.Date  }}" >
@@ -50,11 +43,6 @@
                   </mat-form-field>
 
 
-=======
-
-                  <input type="text" formControlName="Date" value="{{ invoice.Date | date }}" placeholder="Choose Date"
-                    class="form-control" bsDatepicker />
->>>>>>> 914b1da2d3f4b3a3362751c5b2176c73c5a6305b
                 </div>
                 <div class="col-6">
                   <br />
@@ -82,11 +70,7 @@
 
             <div class="d-flex flex-row-reverse m-3">
 
-<<<<<<< HEAD
               <button   mat-raised-button color="primary"   (click)="addProduct()" type="button">
-=======
-              <button class="btn btn-primary" (click)="addProduct()" type="button">
->>>>>>> 914b1da2d3f4b3a3362751c5b2176c73c5a6305b
                 Add Product
               </button>
             </div>
@@ -110,7 +94,6 @@
                   </select>
                 </td>
                 <td>
-<<<<<<< HEAD
                   <mat-form-field class="example-full-width">
                   <input matInput #price type="text" placeholder="Price" formControlName="Price"   />
                 </mat-form-field  >
@@ -131,23 +114,6 @@
                 <td>
                   <label for=""> </label>
                   <button mat-raised-button color="warn" (click)="removeProduct(i)" class="btn btn-danger">
-=======
-                  <input #price type="text" placeholder="Price" formControlName="Price" class="form-control" />
-                </td>
-
-                <td>
-                  <input  #quantity type="text" placeholder="Quantity" formControlName="Quantity" class="form-control" />
-                </td>
-
-                <td>
-                  <input type="text"
-
-                   placeholder="Total" formControlName="Total" class="form-control" />
-                </td>
-                <td>
-                  <label for=""> </label>
-                  <button (click)="removeProduct(i)" class="btn btn-danger">
->>>>>>> 914b1da2d3f4b3a3362751c5b2176c73c5a6305b
                     Remove
                   </button>
                 </td>
@@ -155,18 +121,11 @@
             </table>
             <br />
             <hr />
-<<<<<<< HEAD
- 
+
             <mat-form-field appearance="fill" class="m-2">
               <mat-label>Additional Notes</mat-label>
               <textarea matInput cols="122" rows="3"></textarea>
             </mat-form-field>
-=======
-            <div class="p-2">
-              <strong>Additional Notes</strong>
-              <textarea name="" id="" cols="122" rows="3" style=" width:100%;"></textarea>
-            </div>
->>>>>>> 914b1da2d3f4b3a3362751c5b2176c73c5a6305b
           </div>
         </div>
 
@@ -175,7 +134,6 @@
       <div class="col-3 mt-5">
         <div class="card">
           <div class="card-body">
-<<<<<<< HEAD
             <button type="submit"  mat-raised-button   color="info" style="width: 100%" [disabled]="!productForm.valid">
               Save
             </button>
@@ -184,16 +142,6 @@
               Open
             </button>
             <button type="button"     mat-raised-button color="primary" class="  mt-2" (click)="printPdf()" style="width: 100%" [disabled]="!productForm.valid">
-=======
-            <button type="submit" class="btn btn-success" style="width: 100%" [disabled]="!productForm.valid">
-              Save
-            </button>
-            <button type="button" class="btn btn-info mt-2" (click)="openPdf()" [disabled]="!productForm.valid"
-              style="width: 100%">
-              Open
-            </button>
-            <button type="button" class="btn btn-primary mt-2" (click)="printPdf()" style="width: 100%" [disabled]="!productForm.valid">
->>>>>>> 914b1da2d3f4b3a3362751c5b2176c73c5a6305b
               Print
             </button>
           </div>
