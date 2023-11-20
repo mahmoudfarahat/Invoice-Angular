@@ -1,0 +1,376 @@
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\invoice.dll.config
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\invoice.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\invoice.pdb
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Antlr3.Runtime.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\EntityFramework.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\EntityFramework.SqlServer.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.Google.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Web.Infrastructure.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Newtonsoft.Json.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Owin.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Net.Http.Formatting.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Helpers.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Http.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Http.Owin.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Http.WebHost.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Mvc.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Optimization.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Razor.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.WebPages.Deployment.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.WebPages.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.WebPages.Razor.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\WebGrease.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Newtonsoft.Json.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Net.Http.Formatting.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Helpers.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Http.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Http.WebHost.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Mvc.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Optimization.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Razor.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.WebPages.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.WebPages.Deployment.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.WebPages.Razor.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Antlr3.Runtime.pdb
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\EntityFramework.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\EntityFramework.SqlServer.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.Google.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\bin\System.Web.Http.Owin.xml
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\obj\Debug\invoice.dll
+c:\users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\obj\Debug\invoice.pdb
+C:\Users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\obj\Debug\invoice.Migrations.initail.resources
+C:\Users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\obj\Debug\invoice.csproj.GenerateResource.Cache
+C:\Users\mahmoud.farahat\documents\visual studio 2013\Projects\invoice\invoice\obj\Debug\invoice.Migrations.addEmployes.resources
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Cors.dll
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\bin\System.Web.Cors.dll
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\bin\Microsoft.Owin.Cors.xml
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\obj\Debug\invoice.csproj.AssemblyReference.cache
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\obj\Debug\invoice.csproj.CoreCompileInputs.cache
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\obj\Debug\invoice.csproj.CopyComplete
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\obj\Debug\invoice.Migrations.addCustomers.resources
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\obj\Debug\invoice.Migrations.addProducts.resources
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\obj\Debug\invoice.Migrations.addInvoiceTables.resources
+C:\Users\mahmoud.farahat\Documents\Visual Studio 2013\Projects\invoice\invoice\obj\Debug\invoice.Migrations.edit.resources
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\invoice.dll.config
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\invoice.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\invoice.pdb
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Antlr3.Runtime.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\EntityFramework.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\EntityFramework.SqlServer.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Cors.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Newtonsoft.Json.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Owin.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Net.Http.Formatting.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Cors.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Helpers.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Http.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Http.Owin.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Http.WebHost.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Mvc.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Optimization.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Razor.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.WebPages.Deployment.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.WebPages.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.WebPages.Razor.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\WebGrease.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Cors.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Newtonsoft.Json.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Net.Http.Formatting.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Helpers.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Http.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Http.WebHost.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Mvc.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Optimization.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Razor.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.WebPages.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.WebPages.Deployment.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.WebPages.Razor.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Antlr3.Runtime.pdb
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\EntityFramework.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\EntityFramework.SqlServer.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\bin\System.Web.Http.Owin.xml
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.csproj.AssemblyReference.cache
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.Migrations.initail.resources
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addEmployes.resources
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addCustomers.resources
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addProducts.resources
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addInvoiceTables.resources
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.Migrations.edit.resources
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.csproj.GenerateResource.cache
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.csproj.CoreCompileInputs.cache
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.csproj.CopyComplete
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.dll
+C:\Users\mahmoud.farahat\Desktop\invoiceTask\Backend\invoice\invoice\obj\Debug\invoice.pdb
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\invoice.dll.config
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\invoice.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\invoice.pdb
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Antlr3.Runtime.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.SqlServer.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Cors.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Newtonsoft.Json.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Owin.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Net.Http.Formatting.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Cors.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Helpers.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.Owin.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.WebHost.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Mvc.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Optimization.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Razor.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\WebGrease.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Cors.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Newtonsoft.Json.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Net.Http.Formatting.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Helpers.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.WebHost.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Mvc.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Optimization.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Razor.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Antlr3.Runtime.pdb
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.SqlServer.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.Owin.xml
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.AssemblyReference.cache
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.initail.resources
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addEmployes.resources
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addCustomers.resources
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addProducts.resources
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addInvoiceTables.resources
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.edit.resources
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.GenerateResource.cache
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.CopyComplete
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.dll
+C:\Users\Mahmoud\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.pdb
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\invoice.dll.config
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\invoice.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\invoice.pdb
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Antlr3.Runtime.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.SqlServer.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Cors.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Newtonsoft.Json.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Owin.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Net.Http.Formatting.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Cors.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Helpers.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.Owin.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.WebHost.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Mvc.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Optimization.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Razor.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\WebGrease.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Cors.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Newtonsoft.Json.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Net.Http.Formatting.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Helpers.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.WebHost.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Mvc.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Optimization.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Razor.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Antlr3.Runtime.pdb
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.SqlServer.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.Owin.xml
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.AssemblyReference.cache
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.initail.resources
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addEmployes.resources
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addCustomers.resources
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addProducts.resources
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addInvoiceTables.resources
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.edit.resources
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.GenerateResource.cache
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.CopyComplete
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.dll
+C:\Users\Mahmoud\Desktop\New folder\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.pdb
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\invoice.dll.config
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\invoice.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\invoice.pdb
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Antlr3.Runtime.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.SqlServer.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Cors.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Newtonsoft.Json.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Owin.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Net.Http.Formatting.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Cors.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Helpers.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.Owin.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.WebHost.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Mvc.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Optimization.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Razor.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Deployment.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Razor.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\WebGrease.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Cors.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Newtonsoft.Json.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Net.Http.Formatting.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Helpers.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.WebHost.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Mvc.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Optimization.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Razor.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Deployment.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.WebPages.Razor.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Antlr3.Runtime.pdb
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\EntityFramework.SqlServer.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\bin\System.Web.Http.Owin.xml
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.AssemblyReference.cache
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.initail.resources
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addEmployes.resources
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addCustomers.resources
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addProducts.resources
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addInvoiceTables.resources
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.edit.resources
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.GenerateResource.cache
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.CoreCompileInputs.cache
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.csproj.CopyComplete
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.dll
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.pdb
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.editEmployee.resources

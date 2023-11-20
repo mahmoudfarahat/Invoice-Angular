@@ -1,0 +1,95 @@
+<!-- <div class="container">
+
+
+
+
+  <div *ngIf="rows.length != 0">
+  <ngx-datatable
+    class="bootstrap"
+    [rows]="rows"
+    [count]="count"
+
+    [loadingIndicator]="loadingIndicator"
+    [columns]="columns"
+    [columnMode]="ColumnMode.force"
+    [headerHeight]="40"
+    [summaryRow]="true"
+    [summaryPosition]="'bottom'"
+    [footerHeight]="40"
+    [externalPaging]="true"
+    [count]="count"
+    [offset]="page.offset"
+    [limit]="page.limit"
+    (page)="ClickPage($event)"
+    [limit]="10"
+    rowHeight="auto"
+
+  >
+  </ngx-datatable>
+</div>
+</div>
+ -->
+<div class="container">
+  <div class="d-flex flex-row-reverse mt-5">
+    <button class="btn btn-success btn-lg  " mat-raised-button color="primary" routerLink="create">Create</button>
+  </div>
+   <ngx-datatable
+  class="bootstrap"
+  [count]="count"
+  [loadingIndicator]="loadingIndicator"
+  [columnMode]="columnMode"
+  [footerHeight]="50"
+  [limit]="10"
+  (page)="ClickPage($event)"
+  [rows]="rows"
+
+
+  [limit]="page.limit" [externalPaging]="true"
+  [offset]="page.offset"
+  rowHeight="auto"
+  >
+
+
+
+  <ngx-datatable-column name="InvoiceNumber" [width]="90" [resizeable]="false" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.InvoiceNumber}}
+
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Date" [width]="60" [resizeable]="false" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.Date |date}}
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="" [width]="70" [resizeable]="false"  [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <!-- {{row.id}} -->
+     <a mat-raised-button color="primary" [routerLink]="['edit',row.ID]">Edit</a>
+
+
+
+     <button mat-raised-button color="warn" class="mx-2" (click)="deleteInvoice(row.ID)">Delete</button>
+    </ng-template>
+  </ngx-datatable-column>
+
+
+   </ngx-datatable>
+
+</div>
+
+
+
+
+    <!-- <p  *ngIf="!editMode"   (click)="editMode = true">{{ana.hello}}</p>
+
+    <span *ngIf="editMode">
+      <input value="{{ana.hello}}" >
+      <button  (click)=" editMode = false">Save</button>
+   <span>
+
+
+ -->
+
+

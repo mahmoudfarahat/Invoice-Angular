@@ -1,0 +1,20 @@
+<ng-container *ngIf="!employeeService.selectedEmployee"> Create </ng-container>
+
+<ng-container *ngIf="employeeService.selectedEmployee"> Edit </ng-container>
+
+<form [formGroup]="employeeService.form" (ngSubmit)="createEmployee()">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" data-cy="employee-input-name" formControlName="name" />
+    <label>Code</label>
+    <input type="text" class="form-control"  data-cy="employee-input-code" formControlName="code" />
+    <label>Phone</label>
+    <input type="text" class="form-control"  data-cy="employee-input-phone" formControlName="phone" />
+    <label>Birthdate</label>
+    <input type="date" class="form-control"   data-cy="employee-input-birthdate" formControlName="birthdate" />
+
+  </div>
+
+  <button  data-cy="employee-form" class="btn btn-primary">Submit</button>
+</form>
+
