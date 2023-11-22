@@ -46,6 +46,10 @@ namespace invoice.Models
 
         public Product Product { get; set; }
 
+        public int Tax { get; set; }
+
+        public int Discount { get; set; }
+
 
         public decimal Quantity { get; set; }
 

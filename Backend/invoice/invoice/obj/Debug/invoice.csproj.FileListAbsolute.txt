@@ -374,3 +374,4 @@ C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoic
 C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.dll
 C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.pdb
 C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.editEmployee.resources
+C:\Users\mahmoud.farahat\Desktop\Invoice-Angular-ASP-.NET\Backend\invoice\invoice\obj\Debug\invoice.Migrations.addingTaxAndDiscount.resources

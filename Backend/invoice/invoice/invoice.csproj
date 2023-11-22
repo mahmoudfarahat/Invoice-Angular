@@ -245,6 +245,10 @@
     <Compile Include="Migrations\202311161014593_editEmployee.Designer.cs">
       <DependentUpon>202311161014593_editEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202311220805073_addingTaxAndDiscount.cs" />
+    <Compile Include="Migrations\202311220805073_addingTaxAndDiscount.Designer.cs">
+      <DependentUpon>202311220805073_addingTaxAndDiscount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -347,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311161014593_editEmployee.resx">
       <DependentUpon>202311161014593_editEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311220805073_addingTaxAndDiscount.resx">
+      <DependentUpon>202311220805073_addingTaxAndDiscount.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

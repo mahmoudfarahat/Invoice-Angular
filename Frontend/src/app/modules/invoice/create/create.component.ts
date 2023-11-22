@@ -94,7 +94,8 @@ docDefinition:any;
     Price:new FormControl('', [Validators.required ]),
     Quantity:new FormControl(1, [Validators.required ]),
     Total:new FormControl(0, [Validators.required ]),
-
+    Tax:new FormControl(0),
+    Discount:new FormControl(0)
   }));
 
 
