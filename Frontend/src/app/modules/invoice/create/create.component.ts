@@ -30,7 +30,7 @@ docDefinition:any;
   selectedCar: any = null;
   selectedCustomer: any =null
   selectedEmployee:any = null
-
+  subTotal:any
   value: any ='';
    productForm = new FormGroup({
     InvoiceNumber:new FormControl('', [Validators.required]),
@@ -157,6 +157,9 @@ onPriceChange(event:any,ab :AbstractControl)
 
    const price =this.productList.find((a:any) => a.id === +event.id ).price;
   (ab as FormGroup).get("Price")?.setValue(price);
+
+
+
 }
 
 
@@ -164,6 +167,8 @@ getRowTotal(ab :AbstractControl , quantity:any , price:any)
 {
   let calculatedRow = quantity * price;
    (ab as FormGroup).get("Total")?.setValue(calculatedRow)
+
+   this.subTotalSum()
 
 }
 
@@ -251,6 +256,34 @@ cars = [
     { id: 3, name: 'Opel' },
     { id: 4, name: 'Audi' },
 ];
+
+
+subTotalSum() {
+  let total = 0;
+
+  this.products.value.map((product: any) => {
+    total += parseFloat(product.Price);
+  });
+
+  console.log(total,4444444);
+}
+
+
+// subTotalSum(){
+
+
+//   let total
+//   console.log(this.products.value.map((a:any) =>{
+//     total  = a.Price
+//     total = +a.Price
+
+
+//   }
+
+//   ))
+
+//   console.log(total,222222)
+// }
 
 
 }

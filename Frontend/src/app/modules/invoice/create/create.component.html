@@ -96,8 +96,8 @@
                 <th>Product</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th >Tax</th>
-                <th >Discount</th>
+                <th >Tax%</th>
+                <th >Discount%</th>
                 <th>Total</th>
                 <th>Action</th>
               </tr>
@@ -112,7 +112,7 @@
                   formControlName="ProductName"
                    bindValue="id"
 
-                   (change)="onPriceChange($event, product)"
+                   (change)="onPriceChange($event, product);"
 
                   >
                 </ng-select>
@@ -120,7 +120,7 @@
                 </td>
                 <td>
                   <mat-form-field  >
-                    <input #price  matInput  type="number" formControlName="Price" id="InvoiceNumber" >
+                    <input #price   matInput  type="number" formControlName="Price" id="InvoiceNumber" >
                  </mat-form-field>
                  </td>
 
@@ -141,7 +141,7 @@
                 </td>
                 <td>
                   <mat-form-field  >
-                    <input #total  matInput   type="number" formControlName="Total"
+                    <input #total readonly="true"  matInput   type="number" formControlName="Total"
                     [value]="getRowTotal(product, price.value, quantity.value)" >
                  </mat-form-field>
 
@@ -157,18 +157,51 @@
             </table>
             <br />
 
-            <mat-form-field appearance="fill" class="m-2">
-              <mat-label>Additional Notes</mat-label>
-              <textarea matInput cols="122" rows="3"></textarea>
-            </mat-form-field>
+
+<hr>
+<div class="mx-5 d-flex justify-content-end">
+  <table  class="table" style="width: 220px;">
+    <thead>
+
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">SubTotal</th>
+        <td>3,000</td>
+      </tr>
+      <tr>
+        <th scope="row">Discount</th>
+        <td>18,000</td>
+      </tr>
+      <tr>
+        <th scope="row">Tax</th>
+        <td>18,000</td>
+      </tr>
+      <tr>
+        <th scope="row">Total</th>
+        <td>18,000</td>
+      </tr>
+    </tbody>
+</table>
+</div>
+
+
+<mat-form-field appearance="fill" class="m-2">
+  <mat-label>Additional Notes</mat-label>
+  <textarea matInput cols="122" rows="3"></textarea>
+</mat-form-field>
+
+
 
           </div>
         </div>
+
       </div>
 
+    <div>
 
 
-
+    </div>
 
 
 
@@ -176,8 +209,6 @@
 
 
     </div>
-
-  </form>
     <div class="  mt-5">
       <div class="card">
         <div class="card-body">
@@ -196,6 +227,8 @@
 
       </div>
     </div>
+  </form>
+
 
 
 <!-- <form [formGroup]="imageForm" (ngSubmit)="onSubmit2()">
